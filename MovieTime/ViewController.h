@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "net/TimeRequest.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+
+@property (weak, nonatomic) IBOutlet UINavigationItem *naviItem;
+
+@property (strong, nonatomic) TimeRequest * request;
 
 @end
 
