@@ -19,6 +19,8 @@ typedef void(^Fail)(NSString *msg, NSInteger code);
 
 -(instancetype)initResult:(Class _Nonnull)model success:(Success) success fail: (Fail) fail;
 
--(void) parseData: (NSDictionary *) dic;
+-(void) parseData:(NSDictionary *) dic;
+
+-(BOOL) dispose:(NSDictionary *) dic;
 
 @end

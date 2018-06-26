@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *intro;
 @property (weak, nonatomic) IBOutlet UILabel *showtime;
 @property (weak, nonatomic) IBOutlet UILabel *actors;
+@property (weak, nonatomic) IBOutlet UILabel *type;
 
 @end

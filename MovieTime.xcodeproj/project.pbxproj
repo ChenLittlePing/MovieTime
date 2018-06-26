@@ -19,6 +19,9 @@
 		DC06788220D89E0600325605 /* Net.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06788120D89E0600325605 /* Net.m */; };
 		DC06788920D8DB5A00325605 /* MovieInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06788820D8DB5A00325605 /* MovieInfo.m */; };
 		DC06788D20D8E5A700325605 /* NetResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06788C20D8E5A700325605 /* NetResult.m */; };
+		DC27AE4B20E1D288006603AC /* MovieDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC27AE4A20E1D288006603AC /* MovieDetail.storyboard */; };
+		DC27AE4E20E1D29D006603AC /* MovieDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE4D20E1D29D006603AC /* MovieDetail.m */; };
+		DC27AE5220E1DDAD006603AC /* TimeResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE5120E1DDAD006603AC /* TimeResult.m */; };
 		DC4EF81B20D9E26200617287 /* TimeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81A20D9E26200617287 /* TimeRequest.m */; };
 		DC4EF81E20D9EB1B00617287 /* MovieInfoList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81D20D9EB1B00617287 /* MovieInfoList.m */; };
 		FB418A1C985B3D016EF36928 /* libPods-MovieTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DAF605230FE9C9C71E2A216 /* libPods-MovieTime.a */; };
@@ -60,6 +63,11 @@
 		DC06788820D8DB5A00325605 /* MovieInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieInfo.m; sourceTree = "<group>"; };
 		DC06788B20D8E5A700325605 /* NetResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetResult.h; sourceTree = "<group>"; };
 		DC06788C20D8E5A700325605 /* NetResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetResult.m; sourceTree = "<group>"; };
+		DC27AE4A20E1D288006603AC /* MovieDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetail.storyboard; sourceTree = "<group>"; };
+		DC27AE4C20E1D29D006603AC /* MovieDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetail.h; sourceTree = "<group>"; };
+		DC27AE4D20E1D29D006603AC /* MovieDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetail.m; sourceTree = "<group>"; };
+		DC27AE5020E1DDAD006603AC /* TimeResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeResult.h; sourceTree = "<group>"; };
+		DC27AE5120E1DDAD006603AC /* TimeResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeResult.m; sourceTree = "<group>"; };
 		DC4EF81920D9E26200617287 /* TimeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeRequest.h; sourceTree = "<group>"; };
 		DC4EF81A20D9E26200617287 /* TimeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeRequest.m; sourceTree = "<group>"; };
 		DC4EF81C20D9EB1B00617287 /* MovieInfoList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieInfoList.h; sourceTree = "<group>"; };
@@ -128,6 +136,7 @@
 				DC06788520D8DAF500325605 /* net */,
 				DC06788420D8DAEB00325605 /* bean */,
 				DC06787E20D89DC800325605 /* uitls */,
+				DC27AE4920E1D1FC006603AC /* ui */,
 				DC06784F20D8906C00325605 /* AppDelegate.h */,
 				DC06785020D8906C00325605 /* AppDelegate.m */,
 				DC06785220D8906C00325605 /* ViewController.h */,
@@ -174,6 +183,8 @@
 				DC06788620D8DB1E00325605 /* base */,
 				DC4EF81920D9E26200617287 /* TimeRequest.h */,
 				DC4EF81A20D9E26200617287 /* TimeRequest.m */,
+				DC27AE5020E1DDAD006603AC /* TimeResult.h */,
+				DC27AE5120E1DDAD006603AC /* TimeResult.m */,
 			);
 			path = net;
 			sourceTree = "<group>";
@@ -198,6 +209,24 @@
 				DC4EF81D20D9EB1B00617287 /* MovieInfoList.m */,
 			);
 			path = movieinfo;
+			sourceTree = "<group>";
+		};
+		DC27AE4920E1D1FC006603AC /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				DC27AE4F20E1D2A3006603AC /* detial */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		DC27AE4F20E1D2A3006603AC /* detial */ = {
+			isa = PBXGroup;
+			children = (
+				DC27AE4A20E1D288006603AC /* MovieDetail.storyboard */,
+				DC27AE4C20E1D29D006603AC /* MovieDetail.h */,
+				DC27AE4D20E1D29D006603AC /* MovieDetail.m */,
+			);
+			path = detial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +314,7 @@
 				DC06785920D8906D00325605 /* Assets.xcassets in Resources */,
 				DC06787420D897BD00325605 /* MovieInfoCell.xib in Resources */,
 				DC06785720D8906C00325605 /* Main.storyboard in Resources */,
+				DC27AE4B20E1D288006603AC /* MovieDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +360,8 @@
 				DC06785F20D8906D00325605 /* main.m in Sources */,
 				DC06788920D8DB5A00325605 /* MovieInfo.m in Sources */,
 				DC06787720D89B8E00325605 /* MovieInfoCell.m in Sources */,
+				DC27AE5220E1DDAD006603AC /* TimeResult.m in Sources */,
+				DC27AE4E20E1D29D006603AC /* MovieDetail.m in Sources */,
 				DC06788220D89E0600325605 /* Net.m in Sources */,
 				DC06785120D8906C00325605 /* AppDelegate.m in Sources */,
 			);

@@ -20,10 +20,14 @@
        @"actor1": @"actorName1",
        @"actor2": @"actorName2",
        @"director": @"directorName",
-//       @"is3D": @"is3D",
-//       @"type": @"type",
+       @"is3D": @"is3D",
+       @"type": @"type",
        @"length": @"length",
        @"id": @"movieId"};
+}
+
++ (NSValueTransformer *)is3DJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLBooleanValueTransformerName];
 }
 
 @end

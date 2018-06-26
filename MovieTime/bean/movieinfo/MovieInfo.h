@@ -23,8 +23,8 @@
 @property (nonatomic, strong) NSString *actor1;
 @property (nonatomic, strong) NSString *actor2;
 @property (nonatomic, strong) NSString *director;
-//@property bool *is3D;
-//@property bool *type;
+@property (nonatomic, strong) NSNumber *is3D;
+@property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSNumber *length;
 @property (nonatomic, strong) NSNumber *id;
 

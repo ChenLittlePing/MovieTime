@@ -10,7 +10,8 @@
 #import "MovieInfoCell.h"
 #import "bean/movieinfo/MovieInfo.h"
 #import "bean/movieinfo/MovieInfoList.h"
-#import "net/base/NetResult.h"
+#import "net/TimeResult.h"
+#import "ui/detial/MovieDetail.h"
 
 @interface ViewController ()
 
@@ -37,17 +38,16 @@ NSString *cellName = @"MovieInfoCell";
     self.tableview.delegate = self;
 }
 
-- (void) start {
+- (void)start {
     self.request = [[TimeRequest alloc] init];
     [self getData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return items.count;
 }
 
@@ -69,7 +69,8 @@ NSString *cellName = @"MovieInfoCell";
     });
     
     cell.name.text = info.titleCn;
-    cell.intro.text = [@"简介：" stringByAppendingString:info.desc];
+    cell.intro.text = [@"简介：" stringByAppendingString: [info.desc isEqualToString:@""]? @"无":info.desc];
+    cell.type.text = [@"类型：" stringByAppendingString:info.type];
     cell.actors.text = [@"演员：" stringByAppendingFormat:@"%@，%@",info.actor1, info.actor2];
     cell.showtime.text = [@"首映：" stringByAppendingFormat:@"%@年%@月%@日", info.year.stringValue, info.month.stringValue, info.day.stringValue];
     return cell;
@@ -77,10 +78,13 @@ NSString *cellName = @"MovieInfoCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MovieDetail" bundle:nil];
+    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"MovieDetail"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
-- (void) getData {
-    NetResult *result = [[NetResult alloc] initResult:[MovieInfoList class] success:^(id data) {
+- (void)getData {
+    TimeResult *result = [[TimeResult alloc] initResult:[MovieInfoList class] success:^(id data) {
         MovieInfoList *list = (MovieInfoList *) data;
         [items addObjectsFromArray: list.movies];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -91,6 +95,5 @@ NSString *cellName = @"MovieInfoCell";
     }];
     [self.request getSells:result];
 }
-
 
 @end

@@ -13,6 +13,7 @@
 @synthesize cover = _cover;
 @synthesize name = _name;
 @synthesize intro = _intro;
+@synthesize type = _type;
 @synthesize showtime = _showtime;
 @synthesize actors = _actors;
 

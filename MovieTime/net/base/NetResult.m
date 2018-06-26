@@ -22,11 +22,17 @@
 }
 
 - (void)parseData:(NSDictionary *)dic {
+    if ([self dispose:dic]) return;
+    
     if (self.model == nil) {
         @throw [NSException exceptionWithName:@"ArgmentError" reason:@"model should not be nil, call [NetResult initResult] first" userInfo:nil];
     }
-    id list = [MTLJSONAdapter modelOfClass:self.model fromJSONDictionary:dic error:nil];
-    self.success(list);
+    id data = [MTLJSONAdapter modelOfClass:self.model fromJSONDictionary:dic error:nil];
+    self.success(data);
+}
+
+- (BOOL)dispose:(NSDictionary *) dic {
+    return NO;
 }
 
 @end

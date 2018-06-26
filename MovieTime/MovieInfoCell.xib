@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieInfoCell" rowHeight="394" id="WSt-dG-55f" customClass="MovieInfoCell">
-            <rect key="frame" x="0.0" y="0.0" width="395" height="394"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieInfoCell" rowHeight="515" id="WSt-dG-55f" customClass="MovieInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="515"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WSt-dG-55f" id="VVG-yl-P0W">
-                <rect key="frame" x="0.0" y="0.0" width="395" height="393.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="395" height="514.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VVL-AL-ViE">
-                        <rect key="frame" x="12" y="12" width="371" height="369.5"/>
+                        <rect key="frame" x="12" y="12" width="371" height="490.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NMa-IK-3v2">
                                 <rect key="frame" x="0.0" y="0.0" width="371" height="250"/>
@@ -28,26 +28,32 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PE-YBB">
-                                <rect key="frame" x="0.0" y="258" width="371" height="111.5"/>
+                                <rect key="frame" x="0.0" y="258" width="371" height="232.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmr-VX-ReK">
-                                        <rect key="frame" x="0.0" y="0.0" width="371" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="371" height="118.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="is6-D7-F8l">
-                                        <rect key="frame" x="0.0" y="34" width="371" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="126.5" width="371" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eka-hX-6QP">
+                                        <rect key="frame" x="0.0" y="155" width="371" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7c-fC-9hr">
-                                        <rect key="frame" x="0.0" y="62.5" width="371" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="183.5" width="371" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEN-FU-hZT">
-                                        <rect key="frame" x="0.0" y="91" width="371" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="212" width="371" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -76,8 +82,9 @@
                 <outlet property="intro" destination="is6-D7-F8l" id="gzr-xh-r3T"/>
                 <outlet property="name" destination="Pmr-VX-ReK" id="QSu-2D-hbN"/>
                 <outlet property="showtime" destination="G7c-fC-9hr" id="EP1-j8-ZaT"/>
+                <outlet property="type" destination="Eka-hX-6QP" id="dUk-dj-jTb"/>
             </connections>
-            <point key="canvasLocation" x="266.5" y="-258"/>
+            <point key="canvasLocation" x="266.5" y="-197.5"/>
         </tableViewCell>
     </objects>
 </document>
