@@ -11,6 +11,7 @@
 
 @interface TimeRequest : Net
 
--(void) getSells: (NetResult *) result;
+-(void) getSells: (NetResult *)result;
+-(void)getMovieDetail:(NSNumber *)movieId result:(NetResult *)result;
 
 @end

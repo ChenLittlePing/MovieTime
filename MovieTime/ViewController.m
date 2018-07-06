@@ -11,7 +11,7 @@
 #import "bean/movieinfo/MovieInfo.h"
 #import "bean/movieinfo/MovieInfoList.h"
 #import "net/TimeResult.h"
-#import "ui/detial/MovieDetail.h"
+#import "ui/detial/MovieDetailController.h"
 
 @interface ViewController ()
 
@@ -41,6 +41,26 @@ NSString *cellName = @"MovieInfoCell";
 - (void)start {
     self.request = [[TimeRequest alloc] init];
     [self getData];
+    [self showLoading];
+}
+
+- (void)showLoading {
+    if (!self.indicator) {
+        self.indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        self.indicator.center = CGPointMake(self.view.center.x, self.view.center.y);
+        [self.view addSubview:self.indicator];
+        self.indicator.color = [UIColor orangeColor];
+    }
+    
+    [self.indicator setHidden:NO];
+    [self.indicator startAnimating];
+}
+
+- (void)hideLoading {
+    if (self.indicator) {
+        [self.indicator setHidden:YES];
+        [self.indicator stopAnimating];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,8 +98,9 @@ NSString *cellName = @"MovieInfoCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MovieDetail" bundle:nil];
-    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"MovieDetail"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MovieDetailController" bundle:nil];
+    MovieDetailController *controller = [storyboard instantiateViewControllerWithIdentifier:@"MovieDetailController"];
+    controller.movieId = items[indexPath.row].id;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
@@ -88,10 +109,11 @@ NSString *cellName = @"MovieInfoCell";
         MovieInfoList *list = (MovieInfoList *) data;
         [items addObjectsFromArray: list.movies];
         dispatch_async(dispatch_get_main_queue(), ^{
+            [self hideLoading];
             [self.tableview reloadData];
         });
     } fail:^(NSString *msg, NSInteger code) {
-        
+        [self hideLoading];
     }];
     [self.request getSells:result];
 }

@@ -30,30 +30,33 @@
         <!--影视详情-->
         <scene sceneID="R2a-wI-ITd">
             <objects>
-                <viewController storyboardIdentifier="MovieDetail" id="kHx-mN-vwe" customClass="MovieDetail" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kHx-mN-vwe" customClass="MovieDetailController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VYX-ax-8kb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0NZ-M2-zVM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T5f-rN-VO7">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0yg-KU-Jtl" firstAttribute="trailing" secondItem="0NZ-M2-zVM" secondAttribute="trailing" id="ALS-de-uFc"/>
-                            <constraint firstItem="0NZ-M2-zVM" firstAttribute="top" secondItem="0yg-KU-Jtl" secondAttribute="top" id="ZSU-bY-qZE"/>
-                            <constraint firstItem="0NZ-M2-zVM" firstAttribute="leading" secondItem="0yg-KU-Jtl" secondAttribute="leading" id="ceI-5q-QhC"/>
-                            <constraint firstItem="0yg-KU-Jtl" firstAttribute="bottom" secondItem="0NZ-M2-zVM" secondAttribute="bottom" id="ySN-6v-q3C"/>
+                            <constraint firstItem="0yg-KU-Jtl" firstAttribute="bottom" secondItem="T5f-rN-VO7" secondAttribute="bottom" id="Ei2-sQ-UMo"/>
+                            <constraint firstItem="T5f-rN-VO7" firstAttribute="leading" secondItem="0yg-KU-Jtl" secondAttribute="leading" id="Gd6-3u-mcE"/>
+                            <constraint firstItem="T5f-rN-VO7" firstAttribute="top" secondItem="0yg-KU-Jtl" secondAttribute="top" id="QNW-3g-JWj"/>
+                            <constraint firstItem="0yg-KU-Jtl" firstAttribute="trailing" secondItem="T5f-rN-VO7" secondAttribute="trailing" id="zxI-W2-0Gu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0yg-KU-Jtl"/>
                     </view>
                     <navigationItem key="navigationItem" title="影视详情" id="sdQ-Kl-1B8"/>
+                    <connections>
+                        <outlet property="tableview" destination="T5f-rN-VO7" id="9tH-2u-td2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5M9-PS-Maa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-622" y="152"/>
+            <point key="canvasLocation" x="-623.20000000000005" y="151.57421289355324"/>
         </scene>
     </scenes>
 </document>

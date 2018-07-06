@@ -19,9 +19,20 @@
 		DC06788220D89E0600325605 /* Net.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06788120D89E0600325605 /* Net.m */; };
 		DC06788920D8DB5A00325605 /* MovieInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06788820D8DB5A00325605 /* MovieInfo.m */; };
 		DC06788D20D8E5A700325605 /* NetResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06788C20D8E5A700325605 /* NetResult.m */; };
-		DC27AE4B20E1D288006603AC /* MovieDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC27AE4A20E1D288006603AC /* MovieDetail.storyboard */; };
-		DC27AE4E20E1D29D006603AC /* MovieDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE4D20E1D29D006603AC /* MovieDetail.m */; };
+		DC27AE4B20E1D288006603AC /* MovieDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC27AE4A20E1D288006603AC /* MovieDetailController.storyboard */; };
+		DC27AE4E20E1D29D006603AC /* MovieDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE4D20E1D29D006603AC /* MovieDetailController.m */; };
 		DC27AE5220E1DDAD006603AC /* TimeResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE5120E1DDAD006603AC /* TimeResult.m */; };
+		DC27AE5420E3233C006603AC /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC27AE5320E3233C006603AC /* HeaderCell.xib */; };
+		DC27AE5720E33F44006603AC /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE5620E33F44006603AC /* HeaderCell.m */; };
+		DC27AE5A20E36B9C006603AC /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE5920E36B9C006603AC /* Cell.m */; };
+		DC27AE5E20E36D0D006603AC /* MovieDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE5D20E36D0D006603AC /* MovieDetail.m */; };
+		DC27AE6420E36E76006603AC /* MovieActor.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE6320E36E76006603AC /* MovieActor.m */; };
+		DC27AE6720E3709F006603AC /* MovieVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE6620E3709F006603AC /* MovieVideo.m */; };
+		DC27AE6B20E9D493006603AC /* MovieDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE6A20E9D493006603AC /* MovieDirector.m */; };
+		DC27AE6E20EC5217006603AC /* MovieRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE6D20EC5217006603AC /* MovieRelease.m */; };
+		DC27AE7220EC58FD006603AC /* PeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC27AE7120EC58FD006603AC /* PeopleCell.xib */; };
+		DC27AE7520EC5FB2006603AC /* PeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE7420EC5FB2006603AC /* PeopleCell.m */; };
+		DC27AE7820EC63D9006603AC /* IconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE7720EC63D9006603AC /* IconCell.m */; };
 		DC4EF81B20D9E26200617287 /* TimeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81A20D9E26200617287 /* TimeRequest.m */; };
 		DC4EF81E20D9EB1B00617287 /* MovieInfoList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81D20D9EB1B00617287 /* MovieInfoList.m */; };
 		FB418A1C985B3D016EF36928 /* libPods-MovieTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DAF605230FE9C9C71E2A216 /* libPods-MovieTime.a */; };
@@ -63,11 +74,32 @@
 		DC06788820D8DB5A00325605 /* MovieInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieInfo.m; sourceTree = "<group>"; };
 		DC06788B20D8E5A700325605 /* NetResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetResult.h; sourceTree = "<group>"; };
 		DC06788C20D8E5A700325605 /* NetResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetResult.m; sourceTree = "<group>"; };
-		DC27AE4A20E1D288006603AC /* MovieDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetail.storyboard; sourceTree = "<group>"; };
-		DC27AE4C20E1D29D006603AC /* MovieDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetail.h; sourceTree = "<group>"; };
-		DC27AE4D20E1D29D006603AC /* MovieDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetail.m; sourceTree = "<group>"; };
+		DC27AE4A20E1D288006603AC /* MovieDetailController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetailController.storyboard; sourceTree = "<group>"; };
+		DC27AE4C20E1D29D006603AC /* MovieDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetailController.h; sourceTree = "<group>"; };
+		DC27AE4D20E1D29D006603AC /* MovieDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetailController.m; sourceTree = "<group>"; };
 		DC27AE5020E1DDAD006603AC /* TimeResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeResult.h; sourceTree = "<group>"; };
 		DC27AE5120E1DDAD006603AC /* TimeResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeResult.m; sourceTree = "<group>"; };
+		DC27AE5320E3233C006603AC /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		DC27AE5520E33F44006603AC /* HeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCell.h; sourceTree = "<group>"; };
+		DC27AE5620E33F44006603AC /* HeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCell.m; sourceTree = "<group>"; };
+		DC27AE5820E36682006603AC /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		DC27AE5920E36B9C006603AC /* Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		DC27AE5C20E36D0D006603AC /* MovieDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetail.h; sourceTree = "<group>"; };
+		DC27AE5D20E36D0D006603AC /* MovieDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetail.m; sourceTree = "<group>"; };
+		DC27AE6220E36E76006603AC /* MovieActor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieActor.h; sourceTree = "<group>"; };
+		DC27AE6320E36E76006603AC /* MovieActor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieActor.m; sourceTree = "<group>"; };
+		DC27AE6520E3709F006603AC /* MovieVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieVideo.h; sourceTree = "<group>"; };
+		DC27AE6620E3709F006603AC /* MovieVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieVideo.m; sourceTree = "<group>"; };
+		DC27AE6920E9D493006603AC /* MovieDirector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDirector.h; sourceTree = "<group>"; };
+		DC27AE6A20E9D493006603AC /* MovieDirector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDirector.m; sourceTree = "<group>"; };
+		DC27AE6C20EC5217006603AC /* MovieRelease.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieRelease.h; sourceTree = "<group>"; };
+		DC27AE6D20EC5217006603AC /* MovieRelease.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieRelease.m; sourceTree = "<group>"; };
+		DC27AE7120EC58FD006603AC /* PeopleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleCell.xib; sourceTree = "<group>"; };
+		DC27AE7320EC5FB2006603AC /* PeopleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeopleCell.h; sourceTree = "<group>"; };
+		DC27AE7420EC5FB2006603AC /* PeopleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleCell.m; sourceTree = "<group>"; };
+		DC27AE7620EC63D9006603AC /* IconCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconCell.h; sourceTree = "<group>"; };
+		DC27AE7720EC63D9006603AC /* IconCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconCell.m; sourceTree = "<group>"; };
+		DC27AE7C20EDB2C1006603AC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DC4EF81920D9E26200617287 /* TimeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeRequest.h; sourceTree = "<group>"; };
 		DC4EF81A20D9E26200617287 /* TimeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeRequest.m; sourceTree = "<group>"; };
 		DC4EF81C20D9EB1B00617287 /* MovieInfoList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieInfoList.h; sourceTree = "<group>"; };
@@ -135,7 +167,7 @@
 			children = (
 				DC06788520D8DAF500325605 /* net */,
 				DC06788420D8DAEB00325605 /* bean */,
-				DC06787E20D89DC800325605 /* uitls */,
+				DC06787E20D89DC800325605 /* utils */,
 				DC27AE4920E1D1FC006603AC /* ui */,
 				DC06784F20D8906C00325605 /* AppDelegate.h */,
 				DC06785020D8906C00325605 /* AppDelegate.m */,
@@ -162,16 +194,18 @@
 			path = MovieTimeTests;
 			sourceTree = "<group>";
 		};
-		DC06787E20D89DC800325605 /* uitls */ = {
+		DC06787E20D89DC800325605 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				DC27AE7C20EDB2C1006603AC /* PrefixHeader.pch */,
 			);
-			path = uitls;
+			path = utils;
 			sourceTree = "<group>";
 		};
 		DC06788420D8DAEB00325605 /* bean */ = {
 			isa = PBXGroup;
 			children = (
+				DC27AE5B20E36CD5006603AC /* MovieDetail */,
 				DC06788A20D8DB6300325605 /* movieinfo */,
 			);
 			path = bean;
@@ -222,11 +256,62 @@
 		DC27AE4F20E1D2A3006603AC /* detial */ = {
 			isa = PBXGroup;
 			children = (
-				DC27AE4A20E1D288006603AC /* MovieDetail.storyboard */,
-				DC27AE4C20E1D29D006603AC /* MovieDetail.h */,
-				DC27AE4D20E1D29D006603AC /* MovieDetail.m */,
+				DC27AE6820E3770D006603AC /* Cell */,
+				DC27AE4A20E1D288006603AC /* MovieDetailController.storyboard */,
+				DC27AE4C20E1D29D006603AC /* MovieDetailController.h */,
+				DC27AE4D20E1D29D006603AC /* MovieDetailController.m */,
 			);
 			path = detial;
+			sourceTree = "<group>";
+		};
+		DC27AE5B20E36CD5006603AC /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DC27AE5C20E36D0D006603AC /* MovieDetail.h */,
+				DC27AE5D20E36D0D006603AC /* MovieDetail.m */,
+				DC27AE6220E36E76006603AC /* MovieActor.h */,
+				DC27AE6320E36E76006603AC /* MovieActor.m */,
+				DC27AE6520E3709F006603AC /* MovieVideo.h */,
+				DC27AE6620E3709F006603AC /* MovieVideo.m */,
+				DC27AE6920E9D493006603AC /* MovieDirector.h */,
+				DC27AE6A20E9D493006603AC /* MovieDirector.m */,
+				DC27AE6C20EC5217006603AC /* MovieRelease.h */,
+				DC27AE6D20EC5217006603AC /* MovieRelease.m */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		DC27AE6820E3770D006603AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DC27AE7020EC58D7006603AC /* people */,
+				DC27AE6F20EC5899006603AC /* header */,
+				DC27AE5820E36682006603AC /* Cell.h */,
+				DC27AE5920E36B9C006603AC /* Cell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DC27AE6F20EC5899006603AC /* header */ = {
+			isa = PBXGroup;
+			children = (
+				DC27AE5320E3233C006603AC /* HeaderCell.xib */,
+				DC27AE5520E33F44006603AC /* HeaderCell.h */,
+				DC27AE5620E33F44006603AC /* HeaderCell.m */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		DC27AE7020EC58D7006603AC /* people */ = {
+			isa = PBXGroup;
+			children = (
+				DC27AE7120EC58FD006603AC /* PeopleCell.xib */,
+				DC27AE7320EC5FB2006603AC /* PeopleCell.h */,
+				DC27AE7420EC5FB2006603AC /* PeopleCell.m */,
+				DC27AE7620EC63D9006603AC /* IconCell.h */,
+				DC27AE7720EC63D9006603AC /* IconCell.m */,
+			);
+			path = people;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,8 +398,10 @@
 				DC06785C20D8906D00325605 /* LaunchScreen.storyboard in Resources */,
 				DC06785920D8906D00325605 /* Assets.xcassets in Resources */,
 				DC06787420D897BD00325605 /* MovieInfoCell.xib in Resources */,
+				DC27AE7220EC58FD006603AC /* PeopleCell.xib in Resources */,
+				DC27AE5420E3233C006603AC /* HeaderCell.xib in Resources */,
 				DC06785720D8906C00325605 /* Main.storyboard in Resources */,
-				DC27AE4B20E1D288006603AC /* MovieDetail.storyboard in Resources */,
+				DC27AE4B20E1D288006603AC /* MovieDetailController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,16 +440,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC27AE6420E36E76006603AC /* MovieActor.m in Sources */,
+				DC27AE5A20E36B9C006603AC /* Cell.m in Sources */,
 				DC4EF81B20D9E26200617287 /* TimeRequest.m in Sources */,
+				DC27AE5720E33F44006603AC /* HeaderCell.m in Sources */,
+				DC27AE7520EC5FB2006603AC /* PeopleCell.m in Sources */,
 				DC4EF81E20D9EB1B00617287 /* MovieInfoList.m in Sources */,
 				DC06788D20D8E5A700325605 /* NetResult.m in Sources */,
+				DC27AE5E20E36D0D006603AC /* MovieDetail.m in Sources */,
 				DC06785420D8906C00325605 /* ViewController.m in Sources */,
+				DC27AE6E20EC5217006603AC /* MovieRelease.m in Sources */,
+				DC27AE6B20E9D493006603AC /* MovieDirector.m in Sources */,
 				DC06785F20D8906D00325605 /* main.m in Sources */,
+				DC27AE6720E3709F006603AC /* MovieVideo.m in Sources */,
 				DC06788920D8DB5A00325605 /* MovieInfo.m in Sources */,
 				DC06787720D89B8E00325605 /* MovieInfoCell.m in Sources */,
 				DC27AE5220E1DDAD006603AC /* TimeResult.m in Sources */,
-				DC27AE4E20E1D29D006603AC /* MovieDetail.m in Sources */,
+				DC27AE4E20E1D29D006603AC /* MovieDetailController.m in Sources */,
 				DC06788220D89E0600325605 /* Net.m in Sources */,
+				DC27AE7820EC63D9006603AC /* IconCell.m in Sources */,
 				DC06785120D8906C00325605 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +618,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XGFH256T8Q;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MovieTime/utils/PrefixHeader.pch";
 				INFOPLIST_FILE = MovieTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -540,6 +638,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XGFH256T8Q;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MovieTime/utils/PrefixHeader.pch";
 				INFOPLIST_FILE = MovieTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

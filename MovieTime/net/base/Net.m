@@ -29,9 +29,6 @@ static AFHTTPSessionManager *manager;
         manager.requestSerializer.timeoutInterval = 30.0f;
         // 设置请求头
         [manager.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
-        // 设置接收的Content-Type
-        manager.responseSerializer.acceptableContentTypes =
-        [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/json",@"text/plain",nil];
         
         // 返回格式
         // AFHTTPResponseSerializer           二进制格式
@@ -43,8 +40,8 @@ static AFHTTPSessionManager *manager;
         // AFCompoundResponseSerializer       组合
         
         manager.responseSerializer = [AFJSONResponseSerializer serializer];//返回格式 JSON
-        //设置返回C的ontent-type
-        manager.responseSerializer.acceptableContentTypes=[[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/json",@"text/plain",nil];
+        //设置返回的Content-type
+        manager.responseSerializer.acceptableContentTypes=[[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", @"application/json", @"application/x-javascript", @"text/plain",nil];
     }
 }
 

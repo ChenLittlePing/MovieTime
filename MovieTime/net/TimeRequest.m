@@ -10,14 +10,20 @@
 
 @implementation TimeRequest
 
-
 -(NSString *)getBaseUrl {
     return @"https://api-m.mtime.cn/";
 }
 
--(void)getSells: (NetResult *) result {
+-(void)getSells: (NetResult *)result {
     NSDictionary *dic = @{@"locationId": @"290"};
     [self get:@"PageSubArea/HotPlayMovies.api" widthParams:dic result: result];
+}
+
+-(void)getMovieDetail:(NSNumber *)movieId result:(NetResult *)result {
+    NSDictionary *dic = @{@"locationId": @"290",
+                          @"movieId": movieId};
+    
+    [self get: @"movie/detail.api" widthParams:dic result:result];
 }
 
 @end

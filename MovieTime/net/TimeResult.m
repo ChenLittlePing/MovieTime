@@ -12,10 +12,6 @@
 @implementation TimeResult
 
 - (BOOL)dispose:(NSDictionary *) dic {
-    if ([dic[@"code"] isEqual: [NSNumber numberWithInt:1]]) {
-        self.fail(dic[@"msg"], 200);
-        return YES;
-    }
     return NO;
 }
 

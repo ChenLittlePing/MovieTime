@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,38 +23,38 @@
                         <rect key="frame" x="12" y="12" width="371" height="490.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NMa-IK-3v2">
-                                <rect key="frame" x="0.0" y="0.0" width="371" height="250"/>
+                                <rect key="frame" x="0.0" y="0.0" width="371" height="278.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="wHA-3r-Qu8"/>
+                                    <constraint firstAttribute="width" secondItem="NMa-IK-3v2" secondAttribute="height" multiplier="4:3" id="E6k-SA-xUA"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PE-YBB">
-                                <rect key="frame" x="0.0" y="258" width="371" height="232.5"/>
+                                <rect key="frame" x="0.0" y="286.5" width="371" height="204"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmr-VX-ReK">
-                                        <rect key="frame" x="0.0" y="0.0" width="371" height="118.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="371" height="90"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="is6-D7-F8l">
-                                        <rect key="frame" x="0.0" y="126.5" width="371" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="98" width="371" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eka-hX-6QP">
-                                        <rect key="frame" x="0.0" y="155" width="371" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="126.5" width="371" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7c-fC-9hr">
-                                        <rect key="frame" x="0.0" y="183.5" width="371" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="155" width="371" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEN-FU-hZT">
-                                        <rect key="frame" x="0.0" y="212" width="371" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="183.5" width="371" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -65,6 +66,8 @@
                         <constraints>
                             <constraint firstItem="sAO-PE-YBB" firstAttribute="leading" secondItem="VVL-AL-ViE" secondAttribute="leading" id="B5u-09-WYc"/>
                             <constraint firstItem="sAO-PE-YBB" firstAttribute="top" secondItem="NMa-IK-3v2" secondAttribute="bottom" constant="8" id="EP2-6M-5ME"/>
+                            <constraint firstItem="NMa-IK-3v2" firstAttribute="leading" secondItem="VVL-AL-ViE" secondAttribute="leading" id="g5v-T9-8X6"/>
+                            <constraint firstAttribute="trailing" secondItem="NMa-IK-3v2" secondAttribute="trailing" id="mNg-9y-wIl"/>
                             <constraint firstAttribute="trailing" secondItem="sAO-PE-YBB" secondAttribute="trailing" id="mok-mb-Gjq"/>
                         </constraints>
                     </stackView>

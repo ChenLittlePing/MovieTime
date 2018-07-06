@@ -17,5 +17,7 @@
 
 @property (strong, nonatomic) TimeRequest * request;
 
+@property (strong, nonatomic) UIActivityIndicatorView *indicator;
+
 @end
 
