@@ -32,20 +32,22 @@ MovieDetail *detail;
     self.inited = YES;
 }
 
-- (void)drawRect:(CGRect)rect {
+- (void)layoutSubviews {
+    [self.tableview setNeedsLayout];
+    [self.tableview layoutIfNeeded];
     // 重新设置tableview宽高
     CGFloat width = SCREEN_WIDTH;
     CGFloat height = SCREEN_WIDTH / 5;
-    self.tableview.frame = CGRectMake(0,
-                                      35,
-                                      width - 24,
-                                      height);
+    self.tableview.frame = CGRectMake(0, 46, width - 24, height);
 }
 
 - (void)setFrame:(CGRect)frame {
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
     // 重新设置cell宽高
-    frame.size.height = SCREEN_WIDTH / 5 + 50;
+    frame.size.height = SCREEN_WIDTH / 5 + 54;
     frame.size.width = SCREEN_WIDTH;
+    frame.origin.y += 10; //下移8，行程分割空隙
     [super setFrame:frame];
 }
 
@@ -58,7 +60,11 @@ MovieDetail *detail;
     if (detail == nil) {
         return;
     }
-    self.title.text = @"演员";
+    if (self.type == 1) {
+        self.title.text = @"导演";
+    } else {
+        self.title.text = @"演员";
+    }
     [self.tableview reloadData];
 }
 
@@ -68,8 +74,11 @@ MovieDetail *detail;
         cell = [[IconCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ICON_CELL_ID];
     }
     
-    [cell setData: detail.actors[indexPath.row].img];
-    
+    if (self.type == 0) {
+        [cell setData: detail.actors[indexPath.row].img];
+    } else {
+        [cell setData: detail.director.img];
+    }
     return cell;
 }
 
@@ -81,7 +90,11 @@ MovieDetail *detail;
     if (detail == nil) {
         return 0;
     }
-    return detail.actors.count;
+    if (self.type == 0) {
+        return detail.actors.count;
+    } else {
+        return 1;
+    }
 }
 
 @end

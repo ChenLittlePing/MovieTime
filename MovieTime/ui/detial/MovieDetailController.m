@@ -19,9 +19,11 @@
 
 static NSString *HEADER_CELL_ID;
 static NSString *ACTOR_CELL_ID;
+static NSString *SIMPLE_CELL_ID;
 
 MovieDetail *movieDetail;
 int count = 1;
+BOOL isOpening;
 
 @implementation MovieDetailController
 
@@ -33,17 +35,20 @@ int count = 1;
 
 - (void)dealloc {
     movieDetail = nil;
+    isOpening = false;
 }
 
 - (void)initCellID {
     HEADER_CELL_ID = NSStringFromClass([HeaderCell class]);
     ACTOR_CELL_ID = NSStringFromClass([PeopleCell class]);
+    SIMPLE_CELL_ID = NSStringFromClass([UITableViewCell class]);
 }
 
 - (void)initList {
     self.tableview.dataSource = self;
     self.tableview.delegate = self;
     
+    [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:SIMPLE_CELL_ID];
     [self.tableview registerNib:[UINib nibWithNibName:ACTOR_CELL_ID bundle:nil] forCellReuseIdentifier:ACTOR_CELL_ID];
     [self.tableview registerNib:[UINib nibWithNibName:HEADER_CELL_ID bundle:nil] forCellReuseIdentifier:HEADER_CELL_ID];
     [self.tableview setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -64,8 +69,10 @@ int count = 1;
     NSString *id;
     if (indexPath.row == 0) {
         id = HEADER_CELL_ID;
-    } else if (indexPath.row == 1) {
+    } else if (indexPath.row == 1 || indexPath.row == 2) {
         id = ACTOR_CELL_ID;
+    } else if (indexPath.row == 3) {
+        id = SIMPLE_CELL_ID;
     } else {
         id = @"cell";
     }
@@ -76,26 +83,88 @@ int count = 1;
         cell = [array objectAtIndex:0];
     }
     
+    if (indexPath.row == 1) {
+        ((PeopleCell *)cell).type = 1;
+    } else if (indexPath.row == 2) {
+        ((PeopleCell *)cell).type = 0;
+    } else if (indexPath.row == 3) {
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.text = movieDetail.content;
+        [self adjustContentHeight: cell.textLabel];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        return cell;
+    }
+    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell setData:movieDetail];
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.row == 1 || indexPath.row == 2) {
+        return SCREEN_WIDTH / 5 + 64;
+    }
+    self.tableview.rowHeight = UITableViewAutomaticDimension;
+    self.tableview.estimatedRowHeight = 140;
+    return self.tableview.rowHeight;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    if (indexPath.row == 3) { // 展开或折叠介绍内容
+        isOpening = !isOpening;
+        [self.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 - (void)getData {
     TimeResult *result = [[TimeResult alloc]initResult:MovieDetail.class success:^(id data) {
         [self hideLoading];
         movieDetail = (MovieDetail *) data;
-        count = 2;
+        count = 4;
         [self.tableview reloadData];
     } fail:^(NSString *msg, NSInteger code) {
         [self hideLoading];
     }];
     [self.request getMovieDetail:self.movieId result:result];
+}
+
+- (void)adjustContentHeight: (UILabel *)lable {
+    if (movieDetail.content.length > 0) {
+        NSMutableAttributedString *img_text = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", movieDetail.content]];
+        
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        [paragraphStyle setLineSpacing:3];
+        [paragraphStyle setLineBreakMode:NSLineBreakByTruncatingTail];
+        [img_text addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, lable.text.length)];
+        
+        lable.attributedText = img_text;
+    }
+    // 获取文本内容宽度，计算展示全部文本所需高度
+    CGFloat contentW = SCREEN_WIDTH-2*10 ;
+    NSString *contentStr = lable.text;
+    
+    NSMutableParagraphStyle *descStyle = [[NSMutableParagraphStyle alloc]init];
+    [descStyle setLineSpacing:3];//行间距
+    
+    CGRect textRect = [contentStr
+                       boundingRectWithSize:CGSizeMake(contentW, MAXFLOAT)
+                       options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                       attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.0f], NSParagraphStyleAttributeName : descStyle}
+                       context:nil];
+    // 这里的高度60是通过指定显示三行文字时，通过打印得到的一个临界值，根据需要自行修改
+    // 超过三行文字，折叠按钮不显示
+    if (textRect.size.height > 80) {
+        // 修改按钮的折叠打开状态
+        if (isOpening) {
+            lable.numberOfLines = 0;
+        } else{
+            lable.numberOfLines = 4;
+        }
+    }else{
+        lable.numberOfLines = 0;
+    }
 }
 
 - (void)showLoading {
@@ -116,6 +185,5 @@ int count = 1;
         [self.indicator stopAnimating];
     }
 }
-
 
 @end

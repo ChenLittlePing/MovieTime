@@ -22,44 +22,44 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-9y-7Cy">
-                        <rect key="frame" x="12" y="8" width="322" height="230.5"/>
+                        <rect key="frame" x="12" y="8" width="322" height="226.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2CA-Wz-a1w">
-                                <rect key="frame" x="0.0" y="29" width="129" height="172.5"/>
+                                <rect key="frame" x="0.0" y="27" width="129" height="172.5"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2CA-Wz-a1w" secondAttribute="height" multiplier="3:4" id="ctl-p7-rR8"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ms9-6L-OqB">
-                                <rect key="frame" x="141" y="12" width="181" height="206.5"/>
+                                <rect key="frame" x="141" y="12" width="181" height="202.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="影片：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN2-1D-aA9">
-                                        <rect key="frame" x="0.0" y="0.0" width="181" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="类型：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUG-WC-bOL">
-                                        <rect key="frame" x="0.0" y="43" width="181" height="35"/>
+                                        <rect key="frame" x="0.0" y="42" width="181" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGO-Z8-dej">
-                                        <rect key="frame" x="0.0" y="86" width="181" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="84" width="181" height="34.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上映：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9v9-ud-AlX">
-                                        <rect key="frame" x="0.0" y="128.5" width="181" height="35"/>
+                                        <rect key="frame" x="0.0" y="126.5" width="181" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评分：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKW-Wk-xfJ">
-                                        <rect key="frame" x="0.0" y="171.5" width="181" height="35"/>
+                                        <rect key="frame" x="0.0" y="168.5" width="181" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -75,8 +75,8 @@
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="kbA-9y-7Cy" secondAttribute="bottom" constant="12" id="633-RT-nFd"/>
                     <constraint firstItem="kbA-9y-7Cy" firstAttribute="leading" secondItem="zv2-dW-6xF" secondAttribute="leading" constant="12" id="7zq-dU-5qQ"/>
-                    <constraint firstAttribute="bottom" secondItem="kbA-9y-7Cy" secondAttribute="bottom" constant="8" id="e3d-Pl-ihO"/>
                     <constraint firstAttribute="trailing" secondItem="kbA-9y-7Cy" secondAttribute="trailing" constant="12" id="tka-Gx-TUr"/>
                     <constraint firstItem="kbA-9y-7Cy" firstAttribute="top" secondItem="zv2-dW-6xF" secondAttribute="top" constant="8" id="z2t-pL-K6C"/>
                 </constraints>

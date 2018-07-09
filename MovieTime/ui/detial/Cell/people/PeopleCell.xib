@@ -6,24 +6,23 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PeopleCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="157" id="dbu-6T-JpF" customClass="PeopleCell">
-            <rect key="frame" x="0.0" y="0.0" width="294" height="157"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PeopleCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="149" id="dbu-6T-JpF" customClass="PeopleCell">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="149"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbu-6T-JpF" id="5g9-gQ-cxS">
-                <rect key="frame" x="0.0" y="0.0" width="294" height="156.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="318" height="148.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JAW-1O-rjB">
-                        <rect key="frame" x="12" y="4" width="270" height="129"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JAW-1O-rjB">
+                        <rect key="frame" x="12" y="0.0" width="294" height="145"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uQ-VT-AQK">
-                                <rect key="frame" x="0.0" y="0.0" width="270" height="20"/>
+                                <rect key="frame" x="0.0" y="8" width="294" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="nlu-ik-ID8"/>
                                 </constraints>
@@ -32,45 +31,45 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82L-RN-uWT">
-                                <rect key="frame" x="0.0" y="24" width="270" height="1"/>
+                                <rect key="frame" x="0.0" y="36" width="294" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="VWS-mo-NMH"/>
                                 </constraints>
                             </view>
                             <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w7V-KF-Sv9">
-                                <rect key="frame" x="0.0" y="29" width="270" height="100"/>
+                                <rect key="frame" x="0.0" y="45" width="294" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="cCF-NW-0RH"/>
                                 </constraints>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="82L-RN-uWT" secondAttribute="trailing" id="AxB-OZ-ZkD"/>
                             <constraint firstAttribute="trailing" secondItem="8uQ-VT-AQK" secondAttribute="trailing" id="BxS-DV-MnB"/>
+                            <constraint firstItem="8uQ-VT-AQK" firstAttribute="top" secondItem="JAW-1O-rjB" secondAttribute="top" constant="8" id="GSC-Ps-in8"/>
                             <constraint firstAttribute="trailing" secondItem="w7V-KF-Sv9" secondAttribute="trailing" id="HIP-bV-fSn"/>
                             <constraint firstAttribute="bottom" secondItem="w7V-KF-Sv9" secondAttribute="bottom" id="Imz-Vm-c9X"/>
                             <constraint firstItem="8uQ-VT-AQK" firstAttribute="leading" secondItem="JAW-1O-rjB" secondAttribute="leading" id="MeF-nd-Uwx"/>
                             <constraint firstItem="w7V-KF-Sv9" firstAttribute="leading" secondItem="JAW-1O-rjB" secondAttribute="leading" id="VEj-Pd-7JM"/>
                             <constraint firstItem="82L-RN-uWT" firstAttribute="leading" secondItem="JAW-1O-rjB" secondAttribute="leading" id="sLh-N0-DWA"/>
-                            <constraint firstItem="8uQ-VT-AQK" firstAttribute="top" secondItem="JAW-1O-rjB" secondAttribute="top" id="vcX-wo-TRD"/>
                         </constraints>
                     </stackView>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="JAW-1O-rjB" secondAttribute="trailing" constant="12" id="6KV-N0-xBk"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="JAW-1O-rjB" secondAttribute="bottom" constant="8" id="9Yw-7z-giR"/>
-                    <constraint firstItem="JAW-1O-rjB" firstAttribute="top" secondItem="5g9-gQ-cxS" secondAttribute="top" constant="4" id="ewF-Pg-B2i"/>
+                    <constraint firstAttribute="bottom" secondItem="JAW-1O-rjB" secondAttribute="bottom" id="Ajl-bp-XCF"/>
                     <constraint firstItem="JAW-1O-rjB" firstAttribute="leading" secondItem="5g9-gQ-cxS" secondAttribute="leading" constant="12" id="sy6-nb-Am7"/>
+                    <constraint firstItem="JAW-1O-rjB" firstAttribute="top" secondItem="5g9-gQ-cxS" secondAttribute="top" id="vh9-q8-WAh"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="tableview" destination="w7V-KF-Sv9" id="iLJ-MN-IFB"/>
                 <outlet property="title" destination="8uQ-VT-AQK" id="4ZD-H7-dbE"/>
             </connections>
-            <point key="canvasLocation" x="184" y="-19.5"/>
+            <point key="canvasLocation" x="10" y="-13.5"/>
         </tableViewCell>
     </objects>
 </document>

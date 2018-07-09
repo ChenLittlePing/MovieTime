@@ -41,20 +41,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieTime/MovieInfoCell.m"
-            timestampString = "551772884.740204"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MovieTime/net/base/Net.m"
             timestampString = "552469793.353253"
             startingColumnNumber = "9223372036854775807"
@@ -120,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieTime/ui/detial/MovieDetailController.m"
-            timestampString = "552534996.936067"
+            timestampString = "552793401.80191"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "-getData"
             landmarkType = "7">
          </BreakpointContent>
@@ -184,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieTime/ui/detial/MovieDetailController.m"
-            timestampString = "552534996.93651"
+            timestampString = "552793401.802088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "-getData"
             landmarkType = "7">
          </BreakpointContent>
@@ -200,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieTime/ui/detial/Cell/people/PeopleCell.m"
-            timestampString = "552469793.353792"
+            timestampString = "552793401.802179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -216,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieTime/ui/detial/Cell/people/PeopleCell.m"
-            timestampString = "552469793.353981"
+            timestampString = "552793401.8022569"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -232,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieTime/ui/detial/MovieDetailController.m"
-            timestampString = "552534996.9368"
+            timestampString = "552793401.80233"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -248,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieTime/ui/detial/Cell/people/IconCell.m"
-            timestampString = "552469793.354219"
+            timestampString = "552793401.802408"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -264,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieTime/ui/detial/Cell/people/IconCell.m"
-            timestampString = "552469793.3542989"
+            timestampString = "552793401.802454"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -280,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieTime/ui/detial/Cell/people/PeopleCell.m"
-            timestampString = "552469793.354377"
+            timestampString = "552793401.802497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
@@ -296,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieTime/ui/detial/MovieDetailController.m"
-            timestampString = "552534996.93709"
+            timestampString = "552793401.802569"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
@@ -311,13 +297,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieTime/ui/detial/Cell/people/PeopleCell.m"
-            timestampString = "552469793.3545001"
+            filePath = "MovieTime/ViewController.m"
+            timestampString = "552793401.802647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-drawRect:"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-showLoading"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -327,13 +313,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieTime/ViewController.m"
-            timestampString = "552534996.93735"
+            filePath = "MovieTime/ui/detial/MovieDetailController.m"
+            timestampString = "552793401.802987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-showLoading"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieTime/ui/detial/MovieDetailController.m"
+            timestampString = "552793401.803059"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -10,5 +10,7 @@
 #import "../../../bean/MovieDetail/MovieDetail.h"
 
 @interface Cell: UITableViewCell
+
 -(void) setData: (MovieDetail *) data;
+
 @end

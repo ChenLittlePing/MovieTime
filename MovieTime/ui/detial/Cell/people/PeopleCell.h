@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @property Boolean inited;
+@property int type;
+
 
 @end

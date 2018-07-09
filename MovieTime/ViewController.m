@@ -12,6 +12,7 @@
 #import "bean/movieinfo/MovieInfoList.h"
 #import "net/TimeResult.h"
 #import "ui/detial/MovieDetailController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ViewController ()
 
@@ -36,6 +37,7 @@ NSString *cellName = @"MovieInfoCell";
     
     self.tableview.dataSource = self;
     self.tableview.delegate = self;
+    self.tableview.hidden = YES;
 }
 
 - (void)start {
@@ -80,13 +82,21 @@ NSString *cellName = @"MovieInfoCell";
     }
     
     MovieInfo *info = items[indexPath.row];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL *url = [NSURL URLWithString:info.cover];
-        UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            cell.cover.image = image;
-        });
-    });
+    
+    NSURL *url = [NSURL URLWithString:info.cover];
+    cell.cover.alpha = 0.f;
+    [cell.cover sd_setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if (image) {
+            // Image load from disk or download from network.
+            if (cacheType == SDImageCacheTypeNone || cacheType == SDImageCacheTypeDisk) {
+                [UIView animateWithDuration:0.5f animations:^{
+                    cell.cover.alpha = 1.f;
+                }];
+            } else {
+                cell.cover.alpha = 1.f;
+            }
+        }
+    }];
     
     cell.name.text = info.titleCn;
     cell.intro.text = [@"简介：" stringByAppendingString: [info.desc isEqualToString:@""]? @"无":info.desc];
@@ -104,11 +114,16 @@ NSString *cellName = @"MovieInfoCell";
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    ((MovieInfoCell *) cell).cover.image = nil;
+}
+
 - (void)getData {
     TimeResult *result = [[TimeResult alloc] initResult:[MovieInfoList class] success:^(id data) {
         MovieInfoList *list = (MovieInfoList *) data;
         [items addObjectsFromArray: list.movies];
         dispatch_async(dispatch_get_main_queue(), ^{
+            self.tableview.hidden = NO;
             [self hideLoading];
             [self.tableview reloadData];
         });
