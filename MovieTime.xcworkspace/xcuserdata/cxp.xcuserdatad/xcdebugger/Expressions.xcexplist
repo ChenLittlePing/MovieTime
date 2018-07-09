@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[VideoCell setData:]:VideoCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "data.videos[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[VideoCell initWithStyle:reuseIdentifier:]:VideoCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.contentView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MovieDetailController tableView:cellForRowAtIndexPath:]:MovieDetailController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MovieDetailController tableView:heightForRowAtIndexPath:]:MovieDetailController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView.rowHeight">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[VideoCell awakeFromNib]:VideoCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.playerView.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MovieDetailController adjustContentHeight:]:MovieDetailController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "textRect.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

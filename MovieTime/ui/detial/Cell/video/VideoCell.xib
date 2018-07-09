@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="VideoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="256" id="AxH-AD-BnI" customClass="VideoCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AxH-AD-BnI" id="nWF-Nl-qF9">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="255.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MlJ-rH-WJo">
+                        <rect key="frame" x="12" y="8" width="351" height="239.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预告片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaA-Ak-JZi">
+                                <rect key="frame" x="0.0" y="0.0" width="351" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rD2-zs-nZT">
+                                <rect key="frame" x="0.0" y="33" width="351" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="qf8-E1-4zv"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vkw-2e-mRh">
+                                <rect key="frame" x="0.0" y="42" width="351" height="197.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vkw-2e-mRh" secondAttribute="height" multiplier="16:9" id="kle-Vb-Czy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Vkw-2e-mRh" firstAttribute="leading" secondItem="MlJ-rH-WJo" secondAttribute="leading" id="0Wv-SC-EbA"/>
+                            <constraint firstAttribute="trailing" secondItem="rD2-zs-nZT" secondAttribute="trailing" id="EZK-h3-CKO"/>
+                            <constraint firstAttribute="trailing" secondItem="Vkw-2e-mRh" secondAttribute="trailing" id="Hce-aQ-5LK"/>
+                            <constraint firstItem="rD2-zs-nZT" firstAttribute="leading" secondItem="MlJ-rH-WJo" secondAttribute="leading" id="cVE-BL-JXM"/>
+                            <constraint firstItem="EaA-Ak-JZi" firstAttribute="top" secondItem="MlJ-rH-WJo" secondAttribute="top" id="e0p-OK-oYW"/>
+                            <constraint firstAttribute="trailing" secondItem="EaA-Ak-JZi" secondAttribute="trailing" id="m12-Dj-ITg"/>
+                            <constraint firstItem="EaA-Ak-JZi" firstAttribute="leading" secondItem="MlJ-rH-WJo" secondAttribute="leading" id="sCd-f2-T7D"/>
+                            <constraint firstAttribute="bottom" secondItem="Vkw-2e-mRh" secondAttribute="bottom" id="tli-Ku-H25"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MlJ-rH-WJo" firstAttribute="top" secondItem="nWF-Nl-qF9" secondAttribute="top" constant="8" id="EJn-4r-YBF"/>
+                    <constraint firstAttribute="trailing" secondItem="MlJ-rH-WJo" secondAttribute="trailing" constant="12" id="RDz-0r-q4f"/>
+                    <constraint firstItem="MlJ-rH-WJo" firstAttribute="leading" secondItem="nWF-Nl-qF9" secondAttribute="leading" constant="12" id="UxS-hC-oPO"/>
+                    <constraint firstAttribute="bottom" secondItem="MlJ-rH-WJo" secondAttribute="bottom" constant="8" id="x2g-9T-8J6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="playerView" destination="Vkw-2e-mRh" id="kwa-zN-6IV"/>
+            </connections>
+            <point key="canvasLocation" x="167.5" y="144"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -12,6 +12,7 @@
 #import "../../net/TimeResult.h"
 #import "../../bean/MovieDetail/MovieDetail.h"
 #import "Cell/people/PeopleCell.h"
+#import "Cell/video/VideoCell.h"
 
 @interface MovieDetailController ()
 
@@ -19,7 +20,9 @@
 
 static NSString *HEADER_CELL_ID;
 static NSString *ACTOR_CELL_ID;
+static NSString *VIDEO_CELL_ID;
 static NSString *SIMPLE_CELL_ID;
+
 
 MovieDetail *movieDetail;
 int count = 1;
@@ -41,6 +44,7 @@ BOOL isOpening;
 - (void)initCellID {
     HEADER_CELL_ID = NSStringFromClass([HeaderCell class]);
     ACTOR_CELL_ID = NSStringFromClass([PeopleCell class]);
+    VIDEO_CELL_ID = NSStringFromClass([VideoCell class]);
     SIMPLE_CELL_ID = NSStringFromClass([UITableViewCell class]);
 }
 
@@ -49,8 +53,9 @@ BOOL isOpening;
     self.tableview.delegate = self;
     
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:SIMPLE_CELL_ID];
-    [self.tableview registerNib:[UINib nibWithNibName:ACTOR_CELL_ID bundle:nil] forCellReuseIdentifier:ACTOR_CELL_ID];
     [self.tableview registerNib:[UINib nibWithNibName:HEADER_CELL_ID bundle:nil] forCellReuseIdentifier:HEADER_CELL_ID];
+    [self.tableview registerNib:[UINib nibWithNibName:ACTOR_CELL_ID bundle:nil] forCellReuseIdentifier:ACTOR_CELL_ID];
+    [self.tableview registerNib:[UINib nibWithNibName:VIDEO_CELL_ID bundle:nil] forCellReuseIdentifier:VIDEO_CELL_ID];
     [self.tableview setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
@@ -73,6 +78,8 @@ BOOL isOpening;
         id = ACTOR_CELL_ID;
     } else if (indexPath.row == 3) {
         id = SIMPLE_CELL_ID;
+    } else if (indexPath.row == 4) {
+        id = VIDEO_CELL_ID;
     } else {
         id = @"cell";
     }
@@ -106,7 +113,7 @@ BOOL isOpening;
         return SCREEN_WIDTH / 5 + 64;
     }
     self.tableview.rowHeight = UITableViewAutomaticDimension;
-    self.tableview.estimatedRowHeight = 140;
+    self.tableview.estimatedRowHeight = 300;
     return self.tableview.rowHeight;
 }
 
@@ -122,7 +129,7 @@ BOOL isOpening;
     TimeResult *result = [[TimeResult alloc]initResult:MovieDetail.class success:^(id data) {
         [self hideLoading];
         movieDetail = (MovieDetail *) data;
-        count = 4;
+        count = 5;
         [self.tableview reloadData];
     } fail:^(NSString *msg, NSInteger code) {
         [self hideLoading];
@@ -140,9 +147,10 @@ BOOL isOpening;
         [img_text addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, lable.text.length)];
         
         lable.attributedText = img_text;
+        lable.font = [UIFont systemFontOfSize:14];
     }
     // 获取文本内容宽度，计算展示全部文本所需高度
-    CGFloat contentW = SCREEN_WIDTH-2*10 ;
+    CGFloat contentW = SCREEN_WIDTH - 2*10 ;
     NSString *contentStr = lable.text;
     
     NSMutableParagraphStyle *descStyle = [[NSMutableParagraphStyle alloc]init];
@@ -151,18 +159,18 @@ BOOL isOpening;
     CGRect textRect = [contentStr
                        boundingRectWithSize:CGSizeMake(contentW, MAXFLOAT)
                        options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                       attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17.0f], NSParagraphStyleAttributeName : descStyle}
+                       attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14.0f], NSParagraphStyleAttributeName : descStyle}
                        context:nil];
-    // 这里的高度60是通过指定显示三行文字时，通过打印得到的一个临界值，根据需要自行修改
-    // 超过三行文字，折叠按钮不显示
-    if (textRect.size.height > 80) {
+    // 这里的高度80是通过指定显示四行文字时，通过打印得到的一个临界值，根据需要自行修改
+    // 超过四行文字，折叠按钮不显示
+    if (textRect.size.height > 65) {
         // 修改按钮的折叠打开状态
         if (isOpening) {
             lable.numberOfLines = 0;
         } else{
             lable.numberOfLines = 4;
         }
-    }else{
+    } else {
         lable.numberOfLines = 0;
     }
 }
