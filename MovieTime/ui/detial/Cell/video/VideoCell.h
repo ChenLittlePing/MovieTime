@@ -13,6 +13,7 @@
 @interface VideoCell : Cell
 
 @property (nonatomic, strong) IBOutlet UIView *playerView;
+@property (nonatomic, strong) IBOutlet UIImageView *play;
 
 @property (nonatomic, strong) AVPlayer *player;
 @property (nonatomic, strong) AVPlayerLayer *playLayer;

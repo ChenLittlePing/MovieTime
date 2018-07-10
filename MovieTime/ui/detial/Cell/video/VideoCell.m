@@ -21,14 +21,31 @@
     [self.player replaceCurrentItemWithPlayerItem:item];
 }
 
-- (void)clickView:(UITapGestureRecognizer *)gesture {
+- (void)clickPlay:(UITapGestureRecognizer *)gesture {
     if (!self.playing) {
         [self.player play];
         self.playing = YES;
+        self.play.image = [UIImage imageNamed:@"Pause"];
+        [UIView animateWithDuration:1 animations:^{
+            if (self.play.alpha == 1) {
+                self.play.alpha = 0;
+            }
+        }];
     } else {
         [self.player pause];
         self.playing = NO;
+        self.play.image = [UIImage imageNamed:@"Play"];
     }
+}
+
+- (void)clickPlayContainer:(UITapGestureRecognizer *)gesture {
+    [UIView animateWithDuration:1 animations:^{
+        if (self.play.alpha == 1) {
+            self.play.alpha = 0;
+        } else {
+            self.play.alpha = 1;
+        }
+    }];
 }
 
 - (void)awakeFromNib {
@@ -40,10 +57,16 @@
     //将视频播放图层添加到父控件图层
     [self.playerView.layer addSublayer:self.playLayer];
     
-    self.playerView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickView:)];
+    self.play.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickPlay:)];
     [tapGesture setNumberOfTapsRequired:1];
-    [self.playerView addGestureRecognizer:tapGesture];
+    [self.play addGestureRecognizer:tapGesture];
+    
+    
+    self.playerView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *playGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickPlayContainer:)];
+    [tapGesture setNumberOfTapsRequired:1];
+    [self.playerView addGestureRecognizer:playGesture];
 }
 
 - (void)layoutSubviews {
