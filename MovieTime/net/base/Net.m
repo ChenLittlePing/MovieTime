@@ -59,7 +59,7 @@ static AFHTTPSessionManager *manager;
     if (manager != nil) {
         [manager GET:[self getUrl: endPoint] parameters:params progress:nil
              success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                 NSLog(@"responseObject-->%@",responseObject);
+//                 NSLog(@"responseObject-->%@",responseObject);
                  [result parseData: responseObject];
              } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                  NSLog(@"error-->%@",error);

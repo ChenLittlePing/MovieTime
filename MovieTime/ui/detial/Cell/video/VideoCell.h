@@ -18,6 +18,7 @@
 @property (nonatomic, strong) AVPlayer *player;
 @property (nonatomic, strong) AVPlayerLayer *playLayer;
 
+@property BOOL ready;
 @property BOOL playing;
 
 @end
