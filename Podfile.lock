@@ -17,6 +17,7 @@ PODS:
   - Mantle (2.1.0):
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
+  - Masonry (1.1.0)
   - SDWebImage (4.4.0):
     - SDWebImage/Core (= 4.4.0)
   - SDWebImage/Core (4.4.0)
@@ -24,19 +25,22 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Mantle (~> 2.0)
+  - Masonry (~> 1.1.0)
   - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Mantle
+    - Masonry
     - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: b534502786e43dde36dfcaee89356fe6df30e203
 
-PODFILE CHECKSUM: d5d407e686395c36181a4f51985ef10f4bcee766
+PODFILE CHECKSUM: 631caed8478fa6d21670bffbb4c8a0d5ef12b579
 
 COCOAPODS: 1.5.3

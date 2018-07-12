@@ -35,6 +35,13 @@
 		DC27AE7820EC63D9006603AC /* IconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27AE7720EC63D9006603AC /* IconCell.m */; };
 		DC3D205620F308E200C433B6 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D205520F308E200C433B6 /* VideoCell.m */; };
 		DC3D205820F3399700C433B6 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3D205720F3399700C433B6 /* VideoCell.xib */; };
+		DC3D205D20F7279B00C433B6 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D205B20F7279B00C433B6 /* CommentCell.m */; };
+		DC3D205E20F7279B00C433B6 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3D205C20F7279B00C433B6 /* CommentCell.xib */; };
+		DC3D206120F72C1500C433B6 /* MovieComment.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D206020F72C1500C433B6 /* MovieComment.m */; };
+		DC3D206420F7301500C433B6 /* MovieComments.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D206320F7301500C433B6 /* MovieComments.m */; };
+		DC3D206720F7304800C433B6 /* MovieCommentList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D206620F7304800C433B6 /* MovieCommentList.m */; };
+		DC3D206A20F73C3D00C433B6 /* TicketRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D206920F73C3D00C433B6 /* TicketRequest.m */; };
+		DC3D206D20F7443300C433B6 /* TicketResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D206C20F7443300C433B6 /* TicketResult.m */; };
 		DC4EF81B20D9E26200617287 /* TimeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81A20D9E26200617287 /* TimeRequest.m */; };
 		DC4EF81E20D9EB1B00617287 /* MovieInfoList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81D20D9EB1B00617287 /* MovieInfoList.m */; };
 		FB418A1C985B3D016EF36928 /* libPods-MovieTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DAF605230FE9C9C71E2A216 /* libPods-MovieTime.a */; };
@@ -105,6 +112,19 @@
 		DC3D205420F308E200C433B6 /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
 		DC3D205520F308E200C433B6 /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
 		DC3D205720F3399700C433B6 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		DC3D205A20F7279B00C433B6 /* CommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		DC3D205B20F7279B00C433B6 /* CommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		DC3D205C20F7279B00C433B6 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		DC3D205F20F72C1500C433B6 /* MovieComment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieComment.h; sourceTree = "<group>"; };
+		DC3D206020F72C1500C433B6 /* MovieComment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieComment.m; sourceTree = "<group>"; };
+		DC3D206220F7301500C433B6 /* MovieComments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieComments.h; sourceTree = "<group>"; };
+		DC3D206320F7301500C433B6 /* MovieComments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieComments.m; sourceTree = "<group>"; };
+		DC3D206520F7304800C433B6 /* MovieCommentList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCommentList.h; sourceTree = "<group>"; };
+		DC3D206620F7304800C433B6 /* MovieCommentList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCommentList.m; sourceTree = "<group>"; };
+		DC3D206820F73C3D00C433B6 /* TicketRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketRequest.h; sourceTree = "<group>"; };
+		DC3D206920F73C3D00C433B6 /* TicketRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketRequest.m; sourceTree = "<group>"; };
+		DC3D206B20F7443300C433B6 /* TicketResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketResult.h; sourceTree = "<group>"; };
+		DC3D206C20F7443300C433B6 /* TicketResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketResult.m; sourceTree = "<group>"; };
 		DC4EF81920D9E26200617287 /* TimeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeRequest.h; sourceTree = "<group>"; };
 		DC4EF81A20D9E26200617287 /* TimeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeRequest.m; sourceTree = "<group>"; };
 		DC4EF81C20D9EB1B00617287 /* MovieInfoList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieInfoList.h; sourceTree = "<group>"; };
@@ -224,6 +244,10 @@
 				DC4EF81A20D9E26200617287 /* TimeRequest.m */,
 				DC27AE5020E1DDAD006603AC /* TimeResult.h */,
 				DC27AE5120E1DDAD006603AC /* TimeResult.m */,
+				DC3D206820F73C3D00C433B6 /* TicketRequest.h */,
+				DC3D206920F73C3D00C433B6 /* TicketRequest.m */,
+				DC3D206B20F7443300C433B6 /* TicketResult.h */,
+				DC3D206C20F7443300C433B6 /* TicketResult.m */,
 			);
 			path = net;
 			sourceTree = "<group>";
@@ -282,6 +306,12 @@
 				DC27AE6A20E9D493006603AC /* MovieDirector.m */,
 				DC27AE6C20EC5217006603AC /* MovieRelease.h */,
 				DC27AE6D20EC5217006603AC /* MovieRelease.m */,
+				DC3D205F20F72C1500C433B6 /* MovieComment.h */,
+				DC3D206020F72C1500C433B6 /* MovieComment.m */,
+				DC3D206220F7301500C433B6 /* MovieComments.h */,
+				DC3D206320F7301500C433B6 /* MovieComments.m */,
+				DC3D206520F7304800C433B6 /* MovieCommentList.h */,
+				DC3D206620F7304800C433B6 /* MovieCommentList.m */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -289,6 +319,7 @@
 		DC27AE6820E3770D006603AC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				DC3D205920F7277600C433B6 /* comment */,
 				DC3D205320F308B100C433B6 /* video */,
 				DC27AE7020EC58D7006603AC /* people */,
 				DC27AE6F20EC5899006603AC /* header */,
@@ -328,6 +359,16 @@
 				DC3D205720F3399700C433B6 /* VideoCell.xib */,
 			);
 			path = video;
+			sourceTree = "<group>";
+		};
+		DC3D205920F7277600C433B6 /* comment */ = {
+			isa = PBXGroup;
+			children = (
+				DC3D205A20F7279B00C433B6 /* CommentCell.h */,
+				DC3D205B20F7279B00C433B6 /* CommentCell.m */,
+				DC3D205C20F7279B00C433B6 /* CommentCell.xib */,
+			);
+			path = comment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +458,7 @@
 				DC27AE7220EC58FD006603AC /* PeopleCell.xib in Resources */,
 				DC27AE5420E3233C006603AC /* HeaderCell.xib in Resources */,
 				DC3D205820F3399700C433B6 /* VideoCell.xib in Resources */,
+				DC3D205E20F7279B00C433B6 /* CommentCell.xib in Resources */,
 				DC06785720D8906C00325605 /* Main.storyboard in Resources */,
 				DC27AE4B20E1D288006603AC /* MovieDetailController.storyboard in Resources */,
 			);
@@ -457,17 +499,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3D206420F7301500C433B6 /* MovieComments.m in Sources */,
 				DC27AE6420E36E76006603AC /* MovieActor.m in Sources */,
 				DC3D205620F308E200C433B6 /* VideoCell.m in Sources */,
 				DC27AE5A20E36B9C006603AC /* Cell.m in Sources */,
 				DC4EF81B20D9E26200617287 /* TimeRequest.m in Sources */,
+				DC3D206720F7304800C433B6 /* MovieCommentList.m in Sources */,
 				DC27AE5720E33F44006603AC /* HeaderCell.m in Sources */,
+				DC3D206120F72C1500C433B6 /* MovieComment.m in Sources */,
+				DC3D206A20F73C3D00C433B6 /* TicketRequest.m in Sources */,
+				DC3D206D20F7443300C433B6 /* TicketResult.m in Sources */,
 				DC27AE7520EC5FB2006603AC /* PeopleCell.m in Sources */,
 				DC4EF81E20D9EB1B00617287 /* MovieInfoList.m in Sources */,
 				DC06788D20D8E5A700325605 /* NetResult.m in Sources */,
 				DC27AE5E20E36D0D006603AC /* MovieDetail.m in Sources */,
 				DC06785420D8906C00325605 /* ViewController.m in Sources */,
 				DC27AE6E20EC5217006603AC /* MovieRelease.m in Sources */,
+				DC3D205D20F7279B00C433B6 /* CommentCell.m in Sources */,
 				DC27AE6B20E9D493006603AC /* MovieDirector.m in Sources */,
 				DC06785F20D8906D00325605 /* main.m in Sources */,
 				DC27AE6720E3709F006603AC /* MovieVideo.m in Sources */,

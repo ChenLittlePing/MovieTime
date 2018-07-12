@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "../../net/TimeRequest.h"
+#import "../../net/TicketRequest.h"
 
 @interface MovieDetailController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
@@ -15,7 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 
-@property (strong, nonatomic) TimeRequest * request;
+@property (strong, nonatomic) TimeRequest *movieReq;
+@property (strong, nonatomic) TicketRequest *ticketReq;
 
 @property (strong, nonatomic) UIActivityIndicatorView *indicator;
 

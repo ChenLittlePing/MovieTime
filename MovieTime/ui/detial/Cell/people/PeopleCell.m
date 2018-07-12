@@ -7,6 +7,7 @@
 
 #import "PeopleCell.h"
 #import "../../../../bean/MovieDetail/MovieActor.h"
+#import "../../../../bean/MovieDetail/MovieDetail.h"
 #import "IconCell.h"
 
 static NSString * ICON_CELL_ID = @"ICON_CELL";
@@ -55,8 +56,8 @@ MovieDetail *detail;
     detail = nil;
 }
 
-- (void)setData:(MovieDetail *)data {
-    detail = data;
+- (void)setData:(NSObject *)data {
+    detail = (MovieDetail *)data;
     if (detail == nil) {
         return;
     }

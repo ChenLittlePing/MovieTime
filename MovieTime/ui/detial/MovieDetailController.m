@@ -10,9 +10,12 @@
 #import "Cell/Cell.h"
 #import "Cell/header/HeaderCell.h"
 #import "../../net/TimeResult.h"
+#import "../../net/TicketResult.h"
 #import "../../bean/MovieDetail/MovieDetail.h"
+#import "../../bean/MovieDetail/MovieComments.h"
 #import "Cell/people/PeopleCell.h"
 #import "Cell/video/VideoCell.h"
+#import "Cell/comment/CommentCell.h"
 
 @interface MovieDetailController ()
 
@@ -21,14 +24,18 @@
 static NSString *HEADER_CELL_ID;
 static NSString *ACTOR_CELL_ID;
 static NSString *VIDEO_CELL_ID;
+static NSString *COMMENT_CELL_ID;
 static NSString *SIMPLE_CELL_ID;
 
 
 MovieDetail *movieDetail;
-int count = 1;
+MovieComments *movieComments;
+unsigned long count = 0;
 BOOL isOpening;
 
 @implementation MovieDetailController
+
+#pragma mark - 初始化
 
 -(void)viewDidLoad {
     [self initCellID];
@@ -38,6 +45,7 @@ BOOL isOpening;
 
 - (void)dealloc {
     movieDetail = nil;
+    movieComments = nil;
     isOpening = false;
 }
 
@@ -45,6 +53,7 @@ BOOL isOpening;
     HEADER_CELL_ID = NSStringFromClass([HeaderCell class]);
     ACTOR_CELL_ID = NSStringFromClass([PeopleCell class]);
     VIDEO_CELL_ID = NSStringFromClass([VideoCell class]);
+    COMMENT_CELL_ID = NSStringFromClass([CommentCell class]);
     SIMPLE_CELL_ID = NSStringFromClass([UITableViewCell class]);
 }
 
@@ -56,14 +65,17 @@ BOOL isOpening;
     [self.tableview registerNib:[UINib nibWithNibName:HEADER_CELL_ID bundle:nil] forCellReuseIdentifier:HEADER_CELL_ID];
     [self.tableview registerNib:[UINib nibWithNibName:ACTOR_CELL_ID bundle:nil] forCellReuseIdentifier:ACTOR_CELL_ID];
     [self.tableview registerNib:[UINib nibWithNibName:VIDEO_CELL_ID bundle:nil] forCellReuseIdentifier:VIDEO_CELL_ID];
+    [self.tableview registerNib:[UINib nibWithNibName:COMMENT_CELL_ID bundle:nil] forCellReuseIdentifier:COMMENT_CELL_ID];
     [self.tableview setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 - (void)start {
-    self.request = [[TimeRequest alloc] init];
+    self.movieReq = [[TimeRequest alloc] init];
+    self.ticketReq = [[TicketRequest alloc] init];
     [self getData];
-    [self showLoading];
 }
+
+#pragma mark - 列表代理
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return count;
@@ -81,7 +93,7 @@ BOOL isOpening;
     } else if (indexPath.row == 4) {
         id = VIDEO_CELL_ID;
     } else {
-        id = @"cell";
+        id = COMMENT_CELL_ID;
     }
     
     Cell *cell = (Cell *)[tableView dequeueReusableCellWithIdentifier:id forIndexPath:indexPath];
@@ -103,7 +115,11 @@ BOOL isOpening;
     }
     
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    [cell setData:movieDetail];
+    if (indexPath.row < 5) {
+        [cell setData:movieDetail];
+    } else {
+        [cell setData:movieComments.mini.list[indexPath.row - 5]];
+    }
     
     return cell;
 }
@@ -125,18 +141,6 @@ BOOL isOpening;
     }
 }
 
-- (void)getData {
-    TimeResult *result = [[TimeResult alloc]initResult:MovieDetail.class success:^(id data) {
-        [self hideLoading];
-        movieDetail = (MovieDetail *) data;
-        count = 5;
-        [self.tableview reloadData];
-    } fail:^(NSString *msg, NSInteger code) {
-        [self hideLoading];
-    }];
-    [self.request getMovieDetail:self.movieId result:result];
-}
-
 - (void)adjustContentHeight: (UILabel *)lable {
     if (movieDetail.content.length > 0) {
         NSMutableAttributedString *img_text = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", movieDetail.content]];
@@ -147,7 +151,7 @@ BOOL isOpening;
         [img_text addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, lable.text.length)];
         
         lable.attributedText = img_text;
-        lable.font = [UIFont systemFontOfSize:14];
+        lable.font = [UIFont systemFontOfSize:15];
     }
     // 获取文本内容宽度，计算展示全部文本所需高度
     CGFloat contentW = SCREEN_WIDTH - 2*10 ;
@@ -159,11 +163,11 @@ BOOL isOpening;
     CGRect textRect = [contentStr
                        boundingRectWithSize:CGSizeMake(contentW, MAXFLOAT)
                        options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                       attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14.0f], NSParagraphStyleAttributeName : descStyle}
+                       attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15], NSParagraphStyleAttributeName : descStyle}
                        context:nil];
-    // 这里的高度80是通过指定显示四行文字时，通过打印得到的一个临界值，根据需要自行修改
+    // 这里的高度70是通过指定显示四行文字时，通过打印得到的一个临界值，根据需要自行修改
     // 超过四行文字，折叠按钮不显示
-    if (textRect.size.height > 65) {
+    if (textRect.size.height > 70) {
         // 修改按钮的折叠打开状态
         if (isOpening) {
             lable.numberOfLines = 0;
@@ -174,6 +178,42 @@ BOOL isOpening;
         lable.numberOfLines = 0;
     }
 }
+
+#pragma mark - 获取网络数据
+
+- (void)getData {
+    [self getDetail];
+    [self getComments];
+    [self showLoading];
+}
+
+- (void)getDetail {
+    TimeResult *result = [[TimeResult alloc]initResult:MovieDetail.class success:^(id data) {
+        [self hideLoading];
+        movieDetail = (MovieDetail *) data;
+        count = 5 + movieComments.mini.list.count ;
+        [self.tableview reloadData];
+    } fail:^(NSString *msg, NSInteger code) {
+        [self hideLoading];
+    }];
+    [self.movieReq getMovieDetail:self.movieId result:result];
+}
+
+- (void)getComments {
+    TicketResult *result = [[TicketResult alloc]initResult:MovieComments.class success:^(id  _Nonnull data) {
+        movieComments = (MovieComments *) data;
+        if (count > 0) {
+            count += movieComments.mini.list.count;
+        }
+        [self.tableview reloadData];
+    } fail:^(NSString * _Nonnull msg, NSInteger code) {
+        [self hideLoading];
+    }];
+    
+    [self.ticketReq getHotComments:self.movieId result:result];
+}
+
+#pragma mark - 加载等待
 
 - (void)showLoading {
     if (!self.indicator) {

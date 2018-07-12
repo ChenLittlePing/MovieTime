@@ -8,10 +8,12 @@
 
 #import "HeaderCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "../../../../bean/MovieDetail/MovieDetail.h"
 
 @implementation HeaderCell
 
-- (void)setData:(MovieDetail *)data {
+- (void)setData:(NSObject *)d {
+    MovieDetail *data = (MovieDetail *) d;
     if (data == nil) {
         return;
     }

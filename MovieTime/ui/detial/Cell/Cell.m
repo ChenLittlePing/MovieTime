@@ -10,7 +10,7 @@
 
 @implementation Cell
 
--(void)setData:(MovieDetail *)data {
+-(void)setData:(NSObject *)data {
     
 }
 

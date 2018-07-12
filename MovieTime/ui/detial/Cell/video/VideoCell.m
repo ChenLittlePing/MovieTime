@@ -8,6 +8,7 @@
 
 #import "VideoCell.h"
 #import <AVFoundation/AVPlayerItem.h>
+#import "../../../../bean/MovieDetail/MovieDetail.h"
 
 @implementation VideoCell
 
@@ -54,7 +55,8 @@
 }
 
 #pragma mark - 配置视频播放数据
--(void)setData:(MovieDetail *)data {
+-(void)setData:(NSObject *)d {
+    MovieDetail *data = (MovieDetail *) d;
     if (data == nil || self.playing) {
         return;
     }
