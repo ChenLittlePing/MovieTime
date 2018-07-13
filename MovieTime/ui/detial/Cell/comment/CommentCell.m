@@ -8,6 +8,7 @@
 
 #import "CommentCell.h"
 #import "../../../../bean/MovieDetail/MovieComment.h"
+#import "../../../../bean/Comment/Comment.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation CommentCell
@@ -30,12 +31,21 @@
 #pragma mark - 设置数据
 
 - (void)setData:(NSObject *)d {
-    MovieComment *data = (MovieComment *) d;
-    if (data.header) {
-        [self.header sd_setImageWithURL:[NSURL URLWithString:data.header]];
+    if ([d isKindOfClass:MovieComment.class]) {
+        MovieComment *data = (MovieComment *) d;
+        if (data.header) {
+            [self.header sd_setImageWithURL:[NSURL URLWithString:data.header]];
+        }
+        self.name.text = data.name;
+        self.comment.text = data.comment;
+    } else if ([d isKindOfClass:Comment.class]) {
+        Comment *data = (Comment *) d;
+        if (data.header) {
+            [self.header sd_setImageWithURL:[NSURL URLWithString:data.header]];
+        }
+        self.name.text = data.name;
+        self.comment.text = data.comment;
     }
-    self.name.text = data.name;
-    self.comment.text = data.comment;
 }
 
 @end

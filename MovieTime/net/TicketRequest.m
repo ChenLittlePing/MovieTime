@@ -20,4 +20,12 @@
     [self get: @"movie/hotComment.api" widthParams:dic result:result];
 }
 
+
+-(void)getAllComments:(NSNumber *)movieId inPage:(int)page result:(NetResult *)result {
+    NSDictionary *dic = @{@"movieId": movieId,
+                          @"pageIndex": [NSNumber numberWithInt:page]};
+    
+    [self get: @"Showtime/HotMovieComments.api" widthParams:dic result:result];
+}
+
 @end

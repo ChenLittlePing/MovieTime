@@ -16,6 +16,7 @@
 #import "Cell/people/PeopleCell.h"
 #import "Cell/video/VideoCell.h"
 #import "Cell/comment/CommentCell.h"
+#import "../comment/CommentController.h"
 
 @interface MovieDetailController ()
 
@@ -92,8 +93,10 @@ BOOL isOpening;
         id = SIMPLE_CELL_ID;
     } else if (indexPath.row == 4) {
         id = VIDEO_CELL_ID;
-    } else {
+    } else if(indexPath.row > 4 && indexPath.row < (count - 1)) {
         id = COMMENT_CELL_ID;
+    } else {
+        id = SIMPLE_CELL_ID;
     }
     
     Cell *cell = (Cell *)[tableView dequeueReusableCellWithIdentifier:id forIndexPath:indexPath];
@@ -102,6 +105,8 @@ BOOL isOpening;
         cell = [array objectAtIndex:0];
     }
     
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
     if (indexPath.row == 1) {
         ((PeopleCell *)cell).type = 1;
     } else if (indexPath.row == 2) {
@@ -109,12 +114,17 @@ BOOL isOpening;
     } else if (indexPath.row == 3) {
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.text = movieDetail.content;
+        cell.textLabel.textColor = [UIColor blackColor];
         [self adjustContentHeight: cell.textLabel];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        return cell;
+    } else if (indexPath.row > 4 && indexPath.row == (count - 1)) {
+        cell.textLabel.numberOfLines = 1;
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.textLabel.textColor = [UIColor orangeColor];
+        cell.textLabel.text = @"更多精彩评论";
         return cell;
     }
     
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     if (indexPath.row < 5) {
         [cell setData:movieDetail];
     } else {
@@ -138,6 +148,12 @@ BOOL isOpening;
     if (indexPath.row == 3) { // 展开或折叠介绍内容
         isOpening = !isOpening;
         [self.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (indexPath.row > 4 && indexPath.row == (count - 1)) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CommentController" bundle:nil];
+        MovieDetailController *controller = [storyboard instantiateViewControllerWithIdentifier:@"CommentController"];
+        controller.title = @"影评";
+        controller.movieId = self.movieId;
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 
@@ -154,7 +170,7 @@ BOOL isOpening;
         lable.font = [UIFont systemFontOfSize:15];
     }
     // 获取文本内容宽度，计算展示全部文本所需高度
-    CGFloat contentW = SCREEN_WIDTH - 2*10 ;
+    CGFloat contentW = SCREEN_WIDTH - 2*10;
     NSString *contentStr = lable.text;
     
     NSMutableParagraphStyle *descStyle = [[NSMutableParagraphStyle alloc]init];
@@ -191,7 +207,7 @@ BOOL isOpening;
     TimeResult *result = [[TimeResult alloc]initResult:MovieDetail.class success:^(id data) {
         [self hideLoading];
         movieDetail = (MovieDetail *) data;
-        count = 5 + movieComments.mini.list.count ;
+        count = 5 + movieComments.mini.list.count + 1;
         [self.tableview reloadData];
     } fail:^(NSString *msg, NSInteger code) {
         [self hideLoading];

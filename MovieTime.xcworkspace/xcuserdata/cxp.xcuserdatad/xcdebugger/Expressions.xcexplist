@@ -3,14 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[VideoCell setData:]:VideoCell.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "data.videos[0]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[VideoCell initWithStyle:reuseIdentifier:]:VideoCell.m">
          <PersistentStrings>
             <PersistentString
@@ -19,10 +11,25 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[MovieDetailController tableView:cellForRowAtIndexPath:]:MovieDetailController.m">
+         contextName = "-[TicketRequest getHotComments:result:]:TicketRequest.m">
+      </ContextState>
+      <ContextState
+         contextName = "__36-[MovieDetailController getComments]_block_invoke:MovieDetailController.m">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "__32-[CommentController getComments]_block_invoke:CommentController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CommentController tableView:willDisplayCell:forRowAtIndexPath:]:CommentController.m">
          <PersistentStrings>
             <PersistentString
-               value = "cell.frame">
+               value = "tableView.contentSize.height">
+            </PersistentString>
+            <PersistentString
+               value = "tableView.contentOffset.y + (tableView.frame.size.height) + 20">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -31,6 +38,17 @@
          <PersistentStrings>
             <PersistentString
                value = "tableView.rowHeight">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TicketResult dispose:]:TicketResult.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[VideoCell setData:]:VideoCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "data.videos[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -49,6 +67,20 @@
                value = "textRect.size.height">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MovieDetailController tableView:cellForRowAtIndexPath:]:MovieDetailController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[NetResult parseData:]:NetResult.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CommentController tableView:numberOfRowsInSection:]:CommentController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

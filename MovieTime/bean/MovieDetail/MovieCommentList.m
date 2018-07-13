@@ -19,5 +19,4 @@
     return [MTLJSONAdapter arrayTransformerWithModelClass: MovieComment.class];
 }
 
-
 @end

@@ -42,6 +42,10 @@
 		DC3D206720F7304800C433B6 /* MovieCommentList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D206620F7304800C433B6 /* MovieCommentList.m */; };
 		DC3D206A20F73C3D00C433B6 /* TicketRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D206920F73C3D00C433B6 /* TicketRequest.m */; };
 		DC3D206D20F7443300C433B6 /* TicketResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D206C20F7443300C433B6 /* TicketResult.m */; };
+		DC3D207620F835F500C433B6 /* CommentController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3D207520F835F500C433B6 /* CommentController.storyboard */; };
+		DC3D207920F8361700C433B6 /* CommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D207820F8361700C433B6 /* CommentController.m */; };
+		DC3D207D20F8449200C433B6 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D207C20F8449200C433B6 /* Comment.m */; };
+		DC3D208120F845B700C433B6 /* Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D208020F845B700C433B6 /* Comments.m */; };
 		DC4EF81B20D9E26200617287 /* TimeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81A20D9E26200617287 /* TimeRequest.m */; };
 		DC4EF81E20D9EB1B00617287 /* MovieInfoList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81D20D9EB1B00617287 /* MovieInfoList.m */; };
 		FB418A1C985B3D016EF36928 /* libPods-MovieTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DAF605230FE9C9C71E2A216 /* libPods-MovieTime.a */; };
@@ -125,6 +129,13 @@
 		DC3D206920F73C3D00C433B6 /* TicketRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketRequest.m; sourceTree = "<group>"; };
 		DC3D206B20F7443300C433B6 /* TicketResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicketResult.h; sourceTree = "<group>"; };
 		DC3D206C20F7443300C433B6 /* TicketResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketResult.m; sourceTree = "<group>"; };
+		DC3D207520F835F500C433B6 /* CommentController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommentController.storyboard; sourceTree = "<group>"; };
+		DC3D207720F8361700C433B6 /* CommentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentController.h; sourceTree = "<group>"; };
+		DC3D207820F8361700C433B6 /* CommentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentController.m; sourceTree = "<group>"; };
+		DC3D207B20F8449200C433B6 /* Comment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		DC3D207C20F8449200C433B6 /* Comment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		DC3D207F20F845B700C433B6 /* Comments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comments.h; sourceTree = "<group>"; };
+		DC3D208020F845B700C433B6 /* Comments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comments.m; sourceTree = "<group>"; };
 		DC4EF81920D9E26200617287 /* TimeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeRequest.h; sourceTree = "<group>"; };
 		DC4EF81A20D9E26200617287 /* TimeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeRequest.m; sourceTree = "<group>"; };
 		DC4EF81C20D9EB1B00617287 /* MovieInfoList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieInfoList.h; sourceTree = "<group>"; };
@@ -230,6 +241,7 @@
 		DC06788420D8DAEB00325605 /* bean */ = {
 			isa = PBXGroup;
 			children = (
+				DC3D207A20F843BF00C433B6 /* Comment */,
 				DC27AE5B20E36CD5006603AC /* MovieDetail */,
 				DC06788A20D8DB6300325605 /* movieinfo */,
 			);
@@ -277,6 +289,7 @@
 		DC27AE4920E1D1FC006603AC /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				DC3D206E20F8357D00C433B6 /* comment */,
 				DC27AE4F20E1D2A3006603AC /* detial */,
 			);
 			path = ui;
@@ -371,6 +384,27 @@
 			path = comment;
 			sourceTree = "<group>";
 		};
+		DC3D206E20F8357D00C433B6 /* comment */ = {
+			isa = PBXGroup;
+			children = (
+				DC3D207520F835F500C433B6 /* CommentController.storyboard */,
+				DC3D207720F8361700C433B6 /* CommentController.h */,
+				DC3D207820F8361700C433B6 /* CommentController.m */,
+			);
+			path = comment;
+			sourceTree = "<group>";
+		};
+		DC3D207A20F843BF00C433B6 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				DC3D207B20F8449200C433B6 /* Comment.h */,
+				DC3D207C20F8449200C433B6 /* Comment.m */,
+				DC3D207F20F845B700C433B6 /* Comments.h */,
+				DC3D208020F845B700C433B6 /* Comments.m */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -456,6 +490,7 @@
 				DC06785920D8906D00325605 /* Assets.xcassets in Resources */,
 				DC06787420D897BD00325605 /* MovieInfoCell.xib in Resources */,
 				DC27AE7220EC58FD006603AC /* PeopleCell.xib in Resources */,
+				DC3D207620F835F500C433B6 /* CommentController.storyboard in Resources */,
 				DC27AE5420E3233C006603AC /* HeaderCell.xib in Resources */,
 				DC3D205820F3399700C433B6 /* VideoCell.xib in Resources */,
 				DC3D205E20F7279B00C433B6 /* CommentCell.xib in Resources */,
@@ -509,9 +544,12 @@
 				DC3D206120F72C1500C433B6 /* MovieComment.m in Sources */,
 				DC3D206A20F73C3D00C433B6 /* TicketRequest.m in Sources */,
 				DC3D206D20F7443300C433B6 /* TicketResult.m in Sources */,
+				DC3D207D20F8449200C433B6 /* Comment.m in Sources */,
 				DC27AE7520EC5FB2006603AC /* PeopleCell.m in Sources */,
 				DC4EF81E20D9EB1B00617287 /* MovieInfoList.m in Sources */,
+				DC3D208120F845B700C433B6 /* Comments.m in Sources */,
 				DC06788D20D8E5A700325605 /* NetResult.m in Sources */,
+				DC3D207920F8361700C433B6 /* CommentController.m in Sources */,
 				DC27AE5E20E36D0D006603AC /* MovieDetail.m in Sources */,
 				DC06785420D8906C00325605 /* ViewController.m in Sources */,
 				DC27AE6E20EC5217006603AC /* MovieRelease.m in Sources */,

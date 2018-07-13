@@ -111,6 +111,7 @@ NSString *cellName = @"MovieInfoCell";
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MovieDetailController" bundle:nil];
     MovieDetailController *controller = [storyboard instantiateViewControllerWithIdentifier:@"MovieDetailController"];
     controller.movieId = items[indexPath.row].id;
+    controller.title = items[indexPath.row].titleCn;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

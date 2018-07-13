@@ -12,5 +12,7 @@
 @interface TicketRequest : Net
 
 -(void)getHotComments:(NSNumber *)movieId result:(NetResult *)result;
+-(void)getAllComments:(NSNumber *)movieId inPage:(int)page result:(NetResult *)result;
+
 
 @end
