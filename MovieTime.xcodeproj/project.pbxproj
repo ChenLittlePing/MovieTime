@@ -48,6 +48,10 @@
 		DC3D208120F845B700C433B6 /* Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D208020F845B700C433B6 /* Comments.m */; };
 		DC4EF81B20D9E26200617287 /* TimeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81A20D9E26200617287 /* TimeRequest.m */; };
 		DC4EF81E20D9EB1B00617287 /* MovieInfoList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4EF81D20D9EB1B00617287 /* MovieInfoList.m */; };
+		DC811E5C20FDD5B500207DB1 /* PosterController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC811E5A20FDD5B500207DB1 /* PosterController.m */; };
+		DC811E5F20FDD5FB00207DB1 /* PosterController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC811E5E20FDD5FB00207DB1 /* PosterController.storyboard */; };
+		DC811E6220FDD6D000207DB1 /* MagicMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DC811E6120FDD6D000207DB1 /* MagicMoveTransition.m */; };
+		DC811E6520FEC53C00207DB1 /* MagicMoveInverseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DC811E6420FEC53C00207DB1 /* MagicMoveInverseTransition.m */; };
 		FB418A1C985B3D016EF36928 /* libPods-MovieTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DAF605230FE9C9C71E2A216 /* libPods-MovieTime.a */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +144,13 @@
 		DC4EF81A20D9E26200617287 /* TimeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeRequest.m; sourceTree = "<group>"; };
 		DC4EF81C20D9EB1B00617287 /* MovieInfoList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieInfoList.h; sourceTree = "<group>"; };
 		DC4EF81D20D9EB1B00617287 /* MovieInfoList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieInfoList.m; sourceTree = "<group>"; };
+		DC811E5920FDD5B500207DB1 /* PosterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterController.h; sourceTree = "<group>"; };
+		DC811E5A20FDD5B500207DB1 /* PosterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterController.m; sourceTree = "<group>"; };
+		DC811E5E20FDD5FB00207DB1 /* PosterController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PosterController.storyboard; sourceTree = "<group>"; };
+		DC811E6020FDD6D000207DB1 /* MagicMoveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MagicMoveTransition.h; sourceTree = "<group>"; };
+		DC811E6120FDD6D000207DB1 /* MagicMoveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagicMoveTransition.m; sourceTree = "<group>"; };
+		DC811E6320FEC53C00207DB1 /* MagicMoveInverseTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MagicMoveInverseTransition.h; sourceTree = "<group>"; };
+		DC811E6420FEC53C00207DB1 /* MagicMoveInverseTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagicMoveInverseTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +300,7 @@
 		DC27AE4920E1D1FC006603AC /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				DC811E5820FDD56700207DB1 /* poster */,
 				DC3D206E20F8357D00C433B6 /* comment */,
 				DC27AE4F20E1D2A3006603AC /* detial */,
 			);
@@ -302,6 +314,8 @@
 				DC27AE4A20E1D288006603AC /* MovieDetailController.storyboard */,
 				DC27AE4C20E1D29D006603AC /* MovieDetailController.h */,
 				DC27AE4D20E1D29D006603AC /* MovieDetailController.m */,
+				DC811E6020FDD6D000207DB1 /* MagicMoveTransition.h */,
+				DC811E6120FDD6D000207DB1 /* MagicMoveTransition.m */,
 			);
 			path = detial;
 			sourceTree = "<group>";
@@ -405,6 +419,18 @@
 			path = Comment;
 			sourceTree = "<group>";
 		};
+		DC811E5820FDD56700207DB1 /* poster */ = {
+			isa = PBXGroup;
+			children = (
+				DC811E5920FDD5B500207DB1 /* PosterController.h */,
+				DC811E5A20FDD5B500207DB1 /* PosterController.m */,
+				DC811E5E20FDD5FB00207DB1 /* PosterController.storyboard */,
+				DC811E6320FEC53C00207DB1 /* MagicMoveInverseTransition.h */,
+				DC811E6420FEC53C00207DB1 /* MagicMoveInverseTransition.m */,
+			);
+			path = poster;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,6 +518,7 @@
 				DC27AE7220EC58FD006603AC /* PeopleCell.xib in Resources */,
 				DC3D207620F835F500C433B6 /* CommentController.storyboard in Resources */,
 				DC27AE5420E3233C006603AC /* HeaderCell.xib in Resources */,
+				DC811E5F20FDD5FB00207DB1 /* PosterController.storyboard in Resources */,
 				DC3D205820F3399700C433B6 /* VideoCell.xib in Resources */,
 				DC3D205E20F7279B00C433B6 /* CommentCell.xib in Resources */,
 				DC06785720D8906C00325605 /* Main.storyboard in Resources */,
@@ -553,11 +580,14 @@
 				DC27AE5E20E36D0D006603AC /* MovieDetail.m in Sources */,
 				DC06785420D8906C00325605 /* ViewController.m in Sources */,
 				DC27AE6E20EC5217006603AC /* MovieRelease.m in Sources */,
+				DC811E6220FDD6D000207DB1 /* MagicMoveTransition.m in Sources */,
 				DC3D205D20F7279B00C433B6 /* CommentCell.m in Sources */,
 				DC27AE6B20E9D493006603AC /* MovieDirector.m in Sources */,
+				DC811E6520FEC53C00207DB1 /* MagicMoveInverseTransition.m in Sources */,
 				DC06785F20D8906D00325605 /* main.m in Sources */,
 				DC27AE6720E3709F006603AC /* MovieVideo.m in Sources */,
 				DC06788920D8DB5A00325605 /* MovieInfo.m in Sources */,
+				DC811E5C20FDD5B500207DB1 /* PosterController.m in Sources */,
 				DC06787720D89B8E00325605 /* MovieInfoCell.m in Sources */,
 				DC27AE5220E1DDAD006603AC /* TimeResult.m in Sources */,
 				DC27AE4E20E1D29D006603AC /* MovieDetailController.m in Sources */,

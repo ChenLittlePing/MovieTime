@@ -47,14 +47,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="82L-RN-uWT" secondAttribute="trailing" id="AxB-OZ-ZkD"/>
-                            <constraint firstAttribute="trailing" secondItem="8uQ-VT-AQK" secondAttribute="trailing" id="BxS-DV-MnB"/>
                             <constraint firstItem="8uQ-VT-AQK" firstAttribute="top" secondItem="JAW-1O-rjB" secondAttribute="top" constant="8" id="GSC-Ps-in8"/>
                             <constraint firstAttribute="trailing" secondItem="w7V-KF-Sv9" secondAttribute="trailing" id="HIP-bV-fSn"/>
                             <constraint firstAttribute="bottom" secondItem="w7V-KF-Sv9" secondAttribute="bottom" id="Imz-Vm-c9X"/>
-                            <constraint firstItem="8uQ-VT-AQK" firstAttribute="leading" secondItem="JAW-1O-rjB" secondAttribute="leading" id="MeF-nd-Uwx"/>
                             <constraint firstItem="w7V-KF-Sv9" firstAttribute="leading" secondItem="JAW-1O-rjB" secondAttribute="leading" id="VEj-Pd-7JM"/>
-                            <constraint firstItem="82L-RN-uWT" firstAttribute="leading" secondItem="JAW-1O-rjB" secondAttribute="leading" id="sLh-N0-DWA"/>
                         </constraints>
                     </stackView>
                 </subviews>

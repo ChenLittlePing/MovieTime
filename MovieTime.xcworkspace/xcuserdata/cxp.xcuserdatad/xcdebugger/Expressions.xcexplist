@@ -61,10 +61,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__41-[MagicMoveTransition animateTransition:]_block_invoke:MagicMoveTransition.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "toVC.image.frame">
+            </PersistentString>
+            <PersistentString
+               value = "snapshot.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[MovieDetailController adjustContentHeight:]:MovieDetailController.m">
          <PersistentStrings>
             <PersistentString
                value = "textRect.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__48-[MagicMoveInverseTransition animateTransition:]_block_invoke:MagicMoveInverseTransition.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "header.image.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -78,6 +97,14 @@
       </ContextState>
       <ContextState
          contextName = "-[NetResult parseData:]:NetResult.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MagicMoveTransition animateTransition:]:MagicMoveTransition.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "toVC.view.frame">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[CommentController tableView:numberOfRowsInSection:]:CommentController.m">

@@ -21,7 +21,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="346" height="246.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-9y-7Cy">
+                    <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kbA-9y-7Cy">
                         <rect key="frame" x="12" y="8" width="322" height="226.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2CA-Wz-a1w">

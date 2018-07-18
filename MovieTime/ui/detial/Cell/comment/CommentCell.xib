@@ -50,20 +50,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="knk-4E-6oe" firstAttribute="leading" secondItem="jQ7-z8-CSG" secondAttribute="leading" id="JU2-Oh-YKV"/>
-                                            <constraint firstAttribute="trailing" secondItem="7AN-nY-zu1" secondAttribute="trailing" id="XP0-f9-UEl"/>
-                                            <constraint firstItem="7AN-nY-zu1" firstAttribute="leading" secondItem="jQ7-z8-CSG" secondAttribute="leading" id="sp7-X4-e4X"/>
-                                            <constraint firstAttribute="trailing" secondItem="knk-4E-6oe" secondAttribute="trailing" id="yaG-Fa-9gw"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="jQ7-z8-CSG" secondAttribute="bottom" id="9Pk-yR-NLg"/>
-                                    <constraint firstItem="jQ7-z8-CSG" firstAttribute="top" secondItem="iFg-LI-RHA" secondAttribute="top" id="C0f-lU-JOY"/>
                                     <constraint firstAttribute="trailing" secondItem="jQ7-z8-CSG" secondAttribute="trailing" id="gpD-sZ-Sha"/>
                                     <constraint firstItem="jQ7-z8-CSG" firstAttribute="top" secondItem="iFg-LI-RHA" secondAttribute="top" id="qkT-HR-rwg"/>
-                                    <constraint firstAttribute="bottom" secondItem="jQ7-z8-CSG" secondAttribute="bottom" id="uyz-9X-2oU"/>
                                     <constraint firstItem="a3A-zP-SMh" firstAttribute="width" secondItem="iFg-LI-RHA" secondAttribute="width" multiplier="0.2" id="xaY-Lo-1wk"/>
                                 </constraints>
                             </stackView>
@@ -76,7 +68,6 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="RgO-bo-WDg" secondAttribute="trailing" id="2cn-Go-eOU"/>
                             <constraint firstItem="iFg-LI-RHA" firstAttribute="leading" secondItem="44l-S2-0OP" secondAttribute="leading" constant="12" id="DGU-BD-uEj"/>
                             <constraint firstAttribute="trailing" secondItem="iFg-LI-RHA" secondAttribute="trailing" constant="12" id="P9a-Bl-jqC"/>
                             <constraint firstItem="RgO-bo-WDg" firstAttribute="leading" secondItem="44l-S2-0OP" secondAttribute="leading" id="qtZ-O5-q84"/>

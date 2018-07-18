@@ -17,8 +17,10 @@
 #import "Cell/video/VideoCell.h"
 #import "Cell/comment/CommentCell.h"
 #import "../comment/CommentController.h"
+#import "../poster/PosterController.h"
+#import "MagicMoveTransition.h"
 
-@interface MovieDetailController ()
+@interface MovieDetailController ()<UINavigationControllerDelegate>
 
 @end
 
@@ -42,6 +44,14 @@ BOOL isOpening;
     [self initCellID];
     [self initList];
     [self start];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.delegate = self;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.delegate = nil;
 }
 
 - (void)dealloc {
@@ -145,7 +155,13 @@ BOOL isOpening;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    if (indexPath.row == 3) { // 展开或折叠介绍内容
+    if (indexPath.row == 0) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"PosterController" bundle:nil];
+        PosterController *controller = [storyboard instantiateViewControllerWithIdentifier:@"PosterController"];
+        controller.title = @"海报";
+        controller.url = movieDetail.image;
+        [self.navigationController pushViewController:controller animated:YES];
+    } else if (indexPath.row == 3) { // 展开或折叠介绍内容
         isOpening = !isOpening;
         [self.tableview reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (indexPath.row > 4 && indexPath.row == (count - 1)) {
@@ -247,6 +263,17 @@ BOOL isOpening;
     if (self.indicator) {
         [self.indicator setHidden:YES];
         [self.indicator stopAnimating];
+    }
+}
+
+#pragma mark - 页面切换过渡动画
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+    if ([toVC isKindOfClass:[PosterController class]]) {
+        MagicMoveTransition *transition = [[MagicMoveTransition alloc]init];
+        return transition;
+    }else{
+        return nil;
     }
 }
 
